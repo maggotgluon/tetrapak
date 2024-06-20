@@ -30,15 +30,19 @@ class Quiz extends Component
             // dd($this->score,$this->answer);
             switch (true) {
                 case $this->score <= 3:
+                    $this->answer['type']='A';
                     // dd("0-3 คะแนน คนช่างเลือกแบบ 'เลือกอะไรก็ได้'");
                     break;
                 case $this->score >= 4 && $this->score <= 6 :
+                    $this->answer['type']='B';
                     // dd("4-6 คะแนน คนช่างเลือกแบบ 'เลือกพอเป็นพิธี'");
                     break;
                 case $this->score >= 7 && $this->score <= 9 :
+                    $this->answer['type']='C';
                     // dd("7-9 คะแนน คนช่างเลือกแบบ 'เลือกแล้วเลือกอีก'");
                     break;
                 case $this->score >= 10 && $this->score <= 12 :
+                    $this->answer['type']='D';
                     // dd("10-12 คะแนน คนช่ างเลื อกแบบ 'พิถีพิถัน ตัวมัมระดับเป๊ะ'");
                     break;
                 
@@ -77,13 +81,17 @@ class Quiz extends Component
                     case ($this->answer[6]=='a' || $this->answer[6]=='c') && ($this->answer[7]=='a' || $this->answer[7]=='c') :
                         # code...
                         $this->answer['milk']='almond';
+                        return redirect(route('ClientResult',['result'=>"2-1-".$this->answer['type']]));
                         dd("2 คะแนน ไปเลือกแบรนด์นมอัลมอนด์ในข้อถัดไป");
+                        // 2
                         break;
                     
                     default:
                         # code...
                         $this->answer['milk']='macadamia';
+                        return redirect(route('ClientResult',['result'=>"1-" . $this->answer['type'] ] ) );
                         dd("0-1 คะแนน 'นมแมคคาเดเมีย'");
+                        // 1
                         break;
                 }
             }else{
@@ -91,13 +99,17 @@ class Quiz extends Component
                     case ($this->answer[6]=='a' || $this->answer[6]=='c') && ($this->answer[7]=='c' || $this->answer[7]=='d') :
                         # code...
                         $this->answer['milk']='oat';
+                        return redirect(route('ClientResult',['result'=>"4-1-".$this->answer['type']]));
                         dd("2 คะแนน ไปชุดคําถาม 'นมโอ๊ต'");
+                        // 4
                         break;
                     
                     default:
                         # code...
                         $this->answer['milk']='pistachio';
+                        return redirect(route('ClientResult',['result'=>"3-1-".$this->answer['type']]));
                         dd("0-1 คะแนน ไปชุดคําถาม 'นมพิสตาชิโอ'");  
+                        // 3
                         break;
                 }
 

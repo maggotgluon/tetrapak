@@ -33,7 +33,7 @@ use App\Livewire\Admin\Index as AdminIndex;
 Route::get('/', ClientHome::class)->name('home');
 Route::get('/login', ClientProfile::class)->name('ClientProfile');
 Route::get('/quiz', ClientQuiz::class)->name('ClientQuiz');
-Route::get('/result', ClientResult::class)->name('ClientResult');
+Route::get('/result/{result}/{name?}', ClientResult::class)->name('ClientResult');
 
 // Route::middleware('guest')->group(function () {
 //     Route::get('login', Login::class)
