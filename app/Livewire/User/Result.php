@@ -6,9 +6,9 @@ use Livewire\Component;
 
 class Result extends Component
 {
-    public $result;
+    public $result,$name;
     public function mount($result=2, $name=null){
-        dd($result,$name);
+        // dd($result,$name);
     }
     public function render()
     {
