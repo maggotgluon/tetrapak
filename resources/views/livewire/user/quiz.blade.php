@@ -2,6 +2,7 @@
     <div class="fixed top-1 left-1 max-w-sm z-10">
         score : {{ $score }}<br>
         {{ var_dump($answer) }}
+        1234
     </div>
     <div class="pt-4">
         <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
@@ -130,8 +131,9 @@
                 <div class="p-6 pt-12 w-11/12 m-auto flex-grow">
 
                     <h2 class="text-main text-3xl text-center">เจอเพื่อนๆ ทั้งที แชร์เรื่องราวดีๆ ให้เพื่อนๆ ฟัง</h2>
-                    <div class="absolute top-[75%] w-full px-[20%] text-center">
-                        <x-button flat rounded class="!p-0 !m-auto" wire:click="ansScore('0','',0)" />
+                    
+                    <div class="absolute top-[75%] w-full text-center">
+                        <x-button flat rounded class="" wire:click="ansScore('0','',0)" >
                         <p class="text-3xl">ต่อไป</p>
                         </x-button>
                     </div>
@@ -213,6 +215,7 @@
         @default
         
     @endswitch
+    
     @isset($group)
         @switch($group)
             @case(1)

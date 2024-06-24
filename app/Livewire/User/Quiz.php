@@ -137,11 +137,11 @@ class Quiz extends Component
                         $this->client_answer->status = TRUE;
                         $this->client_answer->save();
 
-                        // return redirect(route('ClientResult',[
-                        //     'result'=>"2-".$this->answer['score']."-".$this->answer['type'],
-                        //     "name"=>$this->client_answer->name
-                        // ]));
-                        dd("2 คะแนน ไปเลือกแบรนด์นมอัลมอนด์ในข้อถัดไป");
+                        return redirect(route('ClientResult',[
+                            'result'=>"2-".$this->answer['score']."-".$this->answer['type'],
+                            "name"=>$this->client_answer->name
+                        ]));
+                        // dd("2 คะแนน ไปเลือกแบรนด์นมอัลมอนด์ในข้อถัดไป");
                         // 2
                         break;
                     
@@ -169,9 +169,9 @@ class Quiz extends Component
                         $this->client_answer->status = TRUE;
                         $this->client_answer->group = "4-".$this->answer['score']."-".$this->answer['type'];
                         $this->client_answer->save();
-                        // return redirect(route('ClientResult',['result'=>$this->client_answer->group,
-                        // "name"=>$this->client_answer->name]));
-                        dd("2 คะแนน ไปชุดคําถาม 'นมโอ๊ต'");
+                        return redirect(route('ClientResult',['result'=>$this->client_answer->group,
+                        "name"=>$this->client_answer->name]));
+                        // dd("2 คะแนน ไปชุดคําถาม 'นมโอ๊ต'");
                         // 4
                         break;
                     
@@ -183,9 +183,9 @@ class Quiz extends Component
                         $this->client_answer->status = TRUE;
                         $this->client_answer->group = "3-1-".$this->answer['type'];
                         $this->client_answer->save();
-                        // return redirect(route('ClientResult',['result'=>"3-1-".$this->answer['type'],
-                        // "name"=>$this->client_answer->name]));
-                        dd("0-1 คะแนน ไปชุดคําถาม 'นมพิสตาชิโอ'");  
+                        return redirect(route('ClientResult',['result'=>"3-1-".$this->answer['type'],
+                        "name"=>$this->client_answer->name]));
+                        // dd("0-1 คะแนน ไปชุดคําถาม 'นมพิสตาชิโอ'");  
                         // 3
                         break;
                 }
