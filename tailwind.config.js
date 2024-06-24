@@ -6,6 +6,15 @@ module.exports = {
         require('./vendor/wireui/wireui/tailwind.config.js')
     ],
     theme: {
+        fontSize: {
+            sm: ['clamp(0.8rem,0.9rem,1rem)','clamp(0.9rem,1rem,1.25rem)'],
+            base: ['clamp(0.8rem,0.9rem,1rem)','clamp(0.9rem,1rem,1.25rem)'],
+            xl: '1.25rem',
+            '2xl': '1.563rem',
+            '3xl': ['clamp(1.1rem,1.5rem,1.9rem)','clamp(1.5rem,1.8rem,2.5rem)'],
+            '4xl': '2.441rem',
+            '5xl': '3.052rem',
+        },
         extend: {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],

@@ -19,7 +19,9 @@
         @endif
         <form wire:submit.prevent="authenticate" class="grid gap-2">
             <x-input label="Email address" wire:model.lazy="email"/>
-            <x-inputs.password label="Password" wire:model.lazy="password"/>
+            <x-input label="Password" wire:model.lazy="password"/>
+
+            {{-- <x-inputs.password label="Password" wire:model.lazy="password"/> --}}
             <div class="flex justify-between items-center py-2">
                 <x-checkbox label="Remember" wire:model.lazy="remember"/>
                 @if(Route::has('password.request'))

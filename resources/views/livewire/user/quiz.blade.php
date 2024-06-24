@@ -1,6 +1,9 @@
-<div class="overflow-clip max-h-svh h-full bg-[#FFF2DC] px-4">
+<div class="overflow-scroll h-full bg-[#FFF2DC] px-4 xs:px-1">
+    <div>
+        score : {{$score}}<br>
+        {{var_dump($answer)}}
+    </div>
     <div class="pt-4">
-        {{-- score : {{$score}}<br> --}}
         <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
             <div class="h-2 bg-primary-{{ $current }}00 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
             </div>
@@ -8,13 +11,15 @@
         <p class="text-xs"><span class="text-primary-{{ $current }}00"> {{ $current }} </span>/ 8 </p>
 
     </div>
-    <div class="h-full min-h-svh {{ isset($answer[1]) ? ' hidden' : ' block' }}  flex flex-col relative">
+    <div class="h-full min-h-svh 
+    {{ isset($answer[1]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+     flex flex-col relative">
         <img src="{{ asset('img/Q1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
         <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
             class="p-6 pt-12 w-11/12 m-auto flex-grow">
             <h2 class="text-main text-3xl text-center">เมื่อคุณจะไปเที่ยวทะเล
                 คุณจะเลือกแต่งตัวแบบไหน</h2>
-            <span class="block text-center">ตอบเพียง 1 ข้อเท่านั้น</span>
+            <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
             <ul class="grid gap-4">
                 <li><x-button class="bg-primary-100 text-white hover:!bg-primary-100 w-full" rounded
                         label="A. เสื้อคู่ที่แมทช์กับแฟน เดินไปไหนก็รู้ว่าเราน่ะคู่กัน (2 คะแนน)"
@@ -30,18 +35,20 @@
                         wire:click="ansScore('1','d',0)" /></li>
             </ul>
         </div>
-        <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+        <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
     </div>
 
 
-    <div class="h-full min-h-svh {{ isset($answer[2]) ? ' hidden' : ' block' }}  flex flex-col relative">
+    <div class="h-full min-h-svh 
+    {{ isset($answer[2]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+     flex flex-col relative">
 
         <img src="{{ asset('img/Q2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
         <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
             class="p-6 pt-12 w-11/12 m-auto flex-grow">
-            <h2 class="text-main text-3xl text-center">โรงแรมแบบไหนที่คณุจะเลือกพัก
-                ในทริปเที่ยวทะเลครั้งน้ี</h2>
-            <span class="block text-center">ตอบเพียง 1 ข้อเท่านั้น</span>
+            <h2 class="text-main text-3xl text-center">โรงแรมแบบไหนที่คุณจะเลือกพัก
+                ในทริปเที่ยวทะเลครั้งนี้</h2>
+            <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
             <ul class="grid gap-4">
                 <li><x-button class="bg-primary-200 text-white hover:!bg-primary-200 w-full" rounded
                         label="A. โรงแรมไหนก็ไม่สำคัญ ขอได้ส่วนลดเยอะไว้ก่อน (0 คะแนน)"
@@ -57,19 +64,21 @@
                         wire:click="ansScore('2','d',1)" /></li>
             </ul>
         </div>
-        <img src="{{ asset('img/Q2-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+        <img src="{{ asset('img/Q2-bottom.png') }}" class="w-2/6 absolute bottom-10" />
     </div>
 
 
-    <div class="h-full min-h-svh {{ isset($answer[3]) ? ' hidden' : ' block' }}  flex flex-col relative">
+    <div class="h-full min-h-svh 
+    {{ isset($answer[3]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+     flex flex-col relative">
 
         <img src="{{ asset('img/Q3-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
         <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
             class="p-6 pt-12 w-11/12 m-auto flex-grow">
             <h2 class="text-main text-3xl text-center">คุณเลือกจะกินอะไร
-                ในทริปเที่ยวครั้งน้ี
+                ในทริปเที่ยวครั้งนี้
             </h2>
-            <span class="block text-center">ตอบเพียง 1 ข้อเท่านั้น</span>
+            <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
             <ul class="grid gap-4">
                 <li><x-button class="bg-primary-300 text-white hover:!bg-primary-300 w-full" rounded
                         label="A. อาหารที่ดีที่สุดและต้องสดที่สุด ขอไปเลือกมาทำกินเองดีกว่า (3 คะแนน)"
@@ -85,18 +94,20 @@
                         wire:click="ansScore('3','d',0)" /></li>
             </ul>
         </div>
-        <img src="{{ asset('img/Q3-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+        <img src="{{ asset('img/Q3-bottom.png') }}" class="w-2/6 absolute bottom-10" />
     </div>
 
 
-    <div class="h-full min-h-svh {{ isset($answer[4]) ? ' hidden' : ' block' }}  flex flex-col relative">
+    <div class="h-full min-h-svh 
+    {{ isset($answer[4]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+     flex flex-col relative">
 
         <img src="{{ asset('img/Q4-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
         <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
             class="p-6 pt-12 w-11/12 m-auto flex-grow">
             <h2 class="text-main text-3xl text-center">คุณเลือกเครื่องดื่มอะไร
                 ในทริปเที่ยวทะเลครั้งนี้</h2>
-            <span class="block text-center">ตอบเพียง 1 ข้อเท่านั้น</span>
+            <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
             <ul class="grid gap-4">
                 <li><x-button class="bg-primary-400 text-white hover:!bg-primary-400 w-full" rounded
                         label="A. ต้องการเป็นกาแฟที่ใช้เมล็ดจากเอธิโอเปีย ดริปด้วยน้ำอุณหภูมิ 95 องศา (3 คะแนน)"
@@ -111,11 +122,13 @@
                         label="D. อะไรที่เร็วที่สุด เอามาเลย 1 แก้ว (0 คะแนน)" wire:click="ansScore('4','d',0)" /></li>
             </ul>
         </div>
-        <img src="{{ asset('img/Q4-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+        <img src="{{ asset('img/Q4-bottom.png') }}" class="w-2/6 absolute bottom-10" />
     </div>
 
 
-    <div class="h-full min-h-svh {{ isset($answer[5]) ? ' hidden' : ' block' }}  flex flex-col relative">
+    <div class="h-full min-h-svh 
+    {{ isset($answer[5]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+     flex flex-col relative">
 
         <img src="{{ asset('img/Q5-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
         <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
@@ -123,7 +136,7 @@
             <h2 class="text-main text-3xl text-center">คุณเลือกที่จะ
                 ดูแลตัวเองด้วยวิธีไหน
             </h2>
-            <span class="block text-center">ตอบเพียง 1 ข้อเท่านั้น</span>
+            <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
             <ul class="grid gap-4">
                 <li><x-button class="bg-primary-500 text-white hover:!bg-primary-100 w-full" rounded
                         label="A. ออกกําลังกายแบบเบิร์นแอนด์บิ้วท์" wire:click="ansScore('5','a',0)" /></li>
@@ -135,12 +148,14 @@
                         label="D. นอนลดโทรม 6-8 ชั่วโมง ทุกวัน" wire:click="ansScore('5','d',0)" /></li>
             </ul>
         </div>
-        <img src="{{ asset('img/Q5-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+        <img src="{{ asset('img/Q5-bottom.png') }}" class="w-2/6 absolute bottom-10" />
     </div>
     @isset($answer['group'])
         @switch($answer['group'])
             @case(1)
-                <div class="h-full min-h-svh {{ isset($answer[6]) ? ' hidden' : ' block' }} flex flex-col relative">
+                <div class="h-full min-h-svh 
+                {{ isset($answer[6]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                flex flex-col relative">
                     6
                     <img src="{{ asset('img/Q6-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                     <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
@@ -159,16 +174,18 @@
                     </ul>
                 </div>
 
-                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
                 </div>
 
 
-                <div class="h-full min-h-svh {{ isset($answer[7]) ? ' hidden' : ' block' }} flex flex-col relative">
+                <div class="h-full min-h-svh 
+                {{ isset($answer[7]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                flex flex-col relative">
                     7
                     <img src="{{ asset('img/Q7-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                     <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
             class="p-6 pt-12 w-11/12 m-auto flex-grow">
-                    <h2 class="text-main text-3xl text-center">อะไรที่ทําให้คุณมี ‘ความมั่นใจ’</h2>
+                    <h2 class="text-main text-3xl text-center">ให้คุณเลือก 1 ข้อ ที่จะทําให้คุณมีมั่นใจ</h2>
                     <ul class="grid gap-4">
                         <li><x-button class="bg-variantsA-200 text-white hover:!bg-primary-100/5 w-full" rounded
                                 label="A. ผิวอิ่มฟู ดูชุ่มชื้น (1 คะแนน)" wire:click="ansScore('7','a',1)" /></li>
@@ -181,11 +198,13 @@
                     </ul>
                 </div>
 
-                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
                 </div>
 
 
-                <div class="h-full min-h-svh {{ isset($answer[8]) ? ' hidden' : ' block' }} flex flex-col relative">
+                <div class="h-full min-h-svh 
+                {{ isset($answer[8]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                flex flex-col relative">
                     8
                     <img src="{{ asset('img/Q8-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                     <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
@@ -197,13 +216,13 @@
                         <li><x-button class="bg-variantsA-300 text-white hover:!bg-primary-100/5 w-full" rounded
                                 label="A. สายนับแคล แคลยิ่งต่ำเรายิ่งแฮปปี่" wire:click="ansScore('8','a',1)" /></li>
                         <li><x-button class="bg-variantsA-300 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="B. สายวิตามิน กินอาหารดี ๆ ที่ได้วิตามินเน้น ๆ " wire:click="ansScore('8','b',1)" /></li>
+                                label="B. สายวิตามิน กินอาหารดี ๆ ที่ได้วิตามินเน้น ๆ " wire:click="ansScore('8','b',2)" /></li>
                         <li><x-button class="bg-variantsA-300 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="C. สายคลีน ขออาหารสุขภาพจากวัตถุดิบธรรมชาติ" wire:click="ansScore('8','c',1)" /></li>
+                                label="C. สายคลีน ขออาหารสุขภาพจากวัตถุดิบธรรมชาติ" wire:click="ansScore('8','c',3)" /></li>
                     </ul>
                 </div>
 
-                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
                 </div>
             @break
 
@@ -211,7 +230,9 @@
                 <hr>group 2
 
 
-                <div class="h-full min-h-svh {{ isset($answer[6]) ? ' hidden' : ' block' }} flex flex-col relative">
+                <div class="h-full min-h-svh 
+                {{ isset($answer[6]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                flex flex-col relative">
                     6
                     <img src="{{ asset('img/Q6-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                     <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
@@ -221,45 +242,49 @@
                     </h2>
                     <ul class="grid gap-4">
                         <li><x-button class="bg-variantsB-100 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="A. ด่ืมน้ําเปล่า 1 แก้ว (1 คะแนน)" wire:click="ansScore('6','a',1)" /></li>
+                                label="A. ดื่มน้ําเปล่า 1 แก้ว (1 คะแนน)" wire:click="ansScore('6','a',1)" /></li>
                         <li><x-button class="bg-variantsB-100 text-white hover:!bg-primary-100/5 w-full" rounded
                                 label="B. เช็ก E-mail วางแผนการทํางาน (0 คะแนน)" wire:click="ansScore('6','b',0)" /></li>
                         <li><x-button class="bg-variantsB-100 text-white hover:!bg-primary-100/5 w-full" rounded
                                 label="C. ส่องกระจกสํารวจดูร่างกาย (1คะแนน)" wire:click="ansScore('6','c',1)" /></li>
                         <li><x-button class="bg-variantsB-100 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="D. เป็ดข่าว ตามเทรนด์บนโซเชียล (0 คะแนน)" wire:click="ansScore('6','d',0)" /></li>
+                                label="D. เปิดข่าว ตามเทรนด์บนโซเชียล (0 คะแนน)" wire:click="ansScore('6','d',0)" /></li>
                     </ul>
                 </div>
 
-                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
                 </div>
 
 
-                <div class="h-full min-h-svh {{ isset($answer[7]) ? ' hidden' : ' block' }} flex flex-col relative">
+                <div class="h-full min-h-svh 
+                {{ isset($answer[7]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                flex flex-col relative">
                     7
                     <img src="{{ asset('img/Q7-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                     <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
             class="p-6 pt-12 w-11/12 m-auto flex-grow">
                     <h2 class="text-main text-3xl text-center">คุณเลือกที่จะ
-                        ออกกำลงักายแบบ...
+                        ออกกำลังกายแบบ...
                     </h2>
                     <ul class="grid gap-4">
                         <li><x-button class="bg-variantsB-200 text-white hover:!bg-primary-100/5 w-full" rounded
                                 label="A. ต่อยมวยให้สุดหมัด (0 คะแนน)" wire:click="ansScore('7','a',0)" /></li>
                         <li><x-button class="bg-variantsB-200 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="B. วิ่งกลางแจง้กับแสงแดดจ้า (0คะแนน)" wire:click="ansScore('7','b',0)" /></li>
+                                label="B. วิ่งกลางแจ้งกับแสงแดดจ้า (0คะแนน)" wire:click="ansScore('7','b',0)" /></li>
                         <li><x-button class="bg-variantsB-200 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="C. วิ่งในร่มเร่งเบิร์น เดินชัน (1คะแนน)" wire:click="ansScore('7','c',1)" /></li>
+                                label="C. เร่งเบิร์น เดินชัน (1คะแนน)" wire:click="ansScore('7','c',1)" /></li>
                         <li><x-button class="bg-variantsB-200 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="D. โยคะเผาผลาญ บาล๊านซ์สัดส่วน (1 คะแนน)" wire:click="ansScore('7','b',1)" /></li>
+                                label="D. โยคะเผาผลาญ บาลานซ์สัดส่วน (1 คะแนน)" wire:click="ansScore('7','b',1)" /></li>
                     </ul>
                 </div>
 
-                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
                 </div>
 
 
-                <div class="h-full min-h-svh {{ isset($answer[8]) ? ' hidden' : ' block' }} flex flex-col relative">
+                <div class="h-full min-h-svh 
+                {{ isset($answer[8]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                flex flex-col relative">
                     8 (นมพิสตาชิโอ) 0-1 คะแนน
                     <img src="{{ asset('img/Q8-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                     <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
@@ -274,11 +299,13 @@
                     </ul>
                 </div>
 
-                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
                 </div>
 
 
-                <div class="h-full min-h-svh {{ isset($answer[8]) ? ' hidden' : ' block' }} flex flex-col relative">
+                <div class="h-full min-h-svh 
+                {{ isset($answer[8]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                flex flex-col relative">
                     8 (นมโอ๊ต) 2 คะแนน
                     <img src="{{ asset('img/Q8-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                     <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
@@ -296,7 +323,7 @@
                     </ul>
                 </div>
 
-                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-0" />
+                    <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
                 </div>
             @break
 
@@ -304,7 +331,5 @@
         @endswitch
     @endisset
 
-
-
-    <x-button label="reqult" wire:click="result" />
+    {{-- <x-button label="reqult" wire:click="result" /> --}}
 </div>
