@@ -3,11 +3,12 @@
     class="relative">
         <h1 class="text-center text-2xl pt-24">คุณเป็น <b>‘คนช่างเลือก’</b> <br>แบบไหน ?</h1>
         {{-- <x-button label="next" :href="route('ClientProfile')"/> --}}
-        <div class="absolute bottom-28 w-full">
-        <a href="{{route('ClientProfile')}}" 
-            class="bg-yellow-600 rounded-full block m-auto shadow-inner px-10 py-4 text-center w-min m-auto"> 
-            คลิก 
-        </a>
+        <div class="absolute bottom-28 w-full text-center">
+            <x-button flat rounded class="!p-0 !m-auto" href="{{route('ClientProfile')}}" >
+                <div class="min-w-64 min-h-10 p-3 text-xl" style="background: url('{{asset('img/Button.png')}}') top center no-repeat; background-size:contain">
+                    คลิก 
+                </div>
+            </x-button>
         </div>
     </div>
     {{-- Nothing in the world is as soft and yielding as water. --}}

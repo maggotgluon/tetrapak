@@ -129,7 +129,10 @@ class Quiz extends Component
                         $this->client_answer->milk =  $this->answer['milk'];
                         $this->client_answer->save();
 
-                        return redirect(route('ClientResult',['result'=>"2-".$this->answer['score']."-".$this->answer['type']]));
+                        return redirect(route('ClientResult',[
+                            'result'=>"2-".$this->answer['score']."-".$this->answer['type'],
+                            "name"=>$this->client_answer->name
+                        ]));
                         dd("2 คะแนน ไปเลือกแบรนด์นมอัลมอนด์ในข้อถัดไป");
                         // 2
                         break;
@@ -140,7 +143,8 @@ class Quiz extends Component
                         
                         $this->client_answer->milk =  $this->answer['milk'];
                         $this->client_answer->save();
-                        return redirect(route('ClientResult',['result'=>"1-" . $this->answer['type'] ] ) );
+                        return redirect(route('ClientResult',['result'=>"1-" . $this->answer['type'],
+                        "name"=>$this->client_answer->name ] ) );
                         dd("0-1 คะแนน 'นมแมคคาเดเมีย'");
                         // 1
                         break;
@@ -153,7 +157,8 @@ class Quiz extends Component
                         
                         $this->client_answer->milk =  $this->answer['milk'];
                         $this->client_answer->save();
-                        return redirect(route('ClientResult',['result'=>"4-1-".$this->answer['type']]));
+                        return redirect(route('ClientResult',['result'=>"4-1-".$this->answer['type'],
+                        "name"=>$this->client_answer->name]));
                         dd("2 คะแนน ไปชุดคําถาม 'นมโอ๊ต'");
                         // 4
                         break;
@@ -164,7 +169,8 @@ class Quiz extends Component
                         
                         $this->client_answer->milk =  $this->answer['milk'];
                         $this->client_answer->save();
-                        return redirect(route('ClientResult',['result'=>"3-1-".$this->answer['type']]));
+                        return redirect(route('ClientResult',['result'=>"3-1-".$this->answer['type'],
+                        "name"=>$this->client_answer->name]));
                         dd("0-1 คะแนน ไปชุดคําถาม 'นมพิสตาชิโอ'");  
                         // 3
                         break;

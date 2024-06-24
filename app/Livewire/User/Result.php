@@ -14,4 +14,10 @@ class Result extends Component
     {
         return view('livewire.user.result');
     }
+    public function saveImages(){
+        dd("save");
+    }
+    public function share(){
+        dd("share");
+    }
 }

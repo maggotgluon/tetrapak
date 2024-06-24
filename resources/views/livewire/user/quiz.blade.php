@@ -1,5 +1,5 @@
 <div class="overflow-scroll h-full bg-[#FFF2DC] px-4 xs:px-1">
-    <div>
+    <div class="fixed">
         score : {{$score}}<br>
         {{var_dump($answer)}}
     </div>
@@ -12,7 +12,7 @@
 
     </div>
     <div class="h-full min-h-svh 
-    {{ isset($answer[1]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+    {{ isset($answer[1]) ? ' hidden pointer-events-none' : ' block' }} 
      flex flex-col relative">
         <img src="{{ asset('img/Q1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
         <div style="background: url({{ asset('img/frame.png') }}) center top; background-size:contain; background-repeat: no-repeat;"
@@ -40,7 +40,7 @@
 
 
     <div class="h-full min-h-svh 
-    {{ isset($answer[2]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+    {{ isset($answer[2]) ? ' hidden pointer-events-none' : ' block' }} 
      flex flex-col relative">
 
         <img src="{{ asset('img/Q2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -69,7 +69,7 @@
 
 
     <div class="h-full min-h-svh 
-    {{ isset($answer[3]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+    {{ isset($answer[3]) ? ' hidden pointer-events-none' : ' block' }} 
      flex flex-col relative">
 
         <img src="{{ asset('img/Q3-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -99,7 +99,7 @@
 
 
     <div class="h-full min-h-svh 
-    {{ isset($answer[4]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+    {{ isset($answer[4]) ? ' hidden pointer-events-none' : ' block' }} 
      flex flex-col relative">
 
         <img src="{{ asset('img/Q4-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -127,7 +127,7 @@
 
 
     <div class="h-full min-h-svh 
-    {{ isset($answer[5]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+    {{ isset($answer[5]) ? ' hidden pointer-events-none' : ' block' }} 
      flex flex-col relative">
 
         <img src="{{ asset('img/Q5-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -154,7 +154,7 @@
         @switch($answer['group'])
             @case(1)
                 <div class="h-full min-h-svh 
-                {{ isset($answer[6]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                {{ isset($answer[6]) ? ' hidden pointer-events-none' : ' block' }} 
                 flex flex-col relative">
                     6
                     <img src="{{ asset('img/Q6-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -179,7 +179,7 @@
 
 
                 <div class="h-full min-h-svh 
-                {{ isset($answer[7]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                {{ isset($answer[7]) ? ' hidden pointer-events-none' : ' block' }} 
                 flex flex-col relative">
                     7
                     <img src="{{ asset('img/Q7-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -203,7 +203,7 @@
 
 
                 <div class="h-full min-h-svh 
-                {{ isset($answer[8]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                {{ isset($answer[8]) ? ' hidden pointer-events-none' : ' block' }} 
                 flex flex-col relative">
                     8
                     <img src="{{ asset('img/Q8-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -231,7 +231,7 @@
 
 
                 <div class="h-full min-h-svh 
-                {{ isset($answer[6]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                {{ isset($answer[6]) ? ' hidden pointer-events-none' : ' block' }} 
                 flex flex-col relative">
                     6
                     <img src="{{ asset('img/Q6-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -257,7 +257,7 @@
 
 
                 <div class="h-full min-h-svh 
-                {{ isset($answer[7]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                {{ isset($answer[7]) ? ' hidden pointer-events-none' : ' block' }} 
                 flex flex-col relative">
                     7
                     <img src="{{ asset('img/Q7-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -283,7 +283,7 @@
 
 
                 <div class="h-full min-h-svh 
-                {{ isset($answer[8]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                {{ isset($answer[8]) ? ' hidden pointer-events-none' : ' block' }} 
                 flex flex-col relative">
                     8 (นมพิสตาชิโอ) 0-1 คะแนน
                     <img src="{{ asset('img/Q8-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -304,7 +304,7 @@
 
 
                 <div class="h-full min-h-svh 
-                {{ isset($answer[8]) ? ' opacity-40 pointer-events-none' : ' block' }} 
+                {{ isset($answer[8]) ? ' hidden pointer-events-none' : ' block' }} 
                 flex flex-col relative">
                     8 (นมโอ๊ต) 2 คะแนน
                     <img src="{{ asset('img/Q8-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />

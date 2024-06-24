@@ -21,7 +21,11 @@
             <x-input label="age" wire:model="age" type="number" min="1" max="99"/>
         </div>
         <div class="absolute top-[78%] w-full px-[20%] text-center">
-        <x-button class="m-auto" type="submit" label="let go" wire:click="goQuiz"/>
+            <x-button flat rounded class="!p-0 !m-auto" type="submit" wire:click="goQuiz">
+                <div class="min-w-64 min-h-10 p-3 text-xl" style="background: url('{{asset('img/Button.png')}}') top center no-repeat; background-size:contain">
+                    let go
+                </div>
+            </x-button>
         </div>
         {{-- <a wire:click="goQuiz"
             class="bg-yellow-600 rounded-full shadow-inner px-10 py-4 text-center w-min m-auto"> 
