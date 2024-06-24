@@ -18,11 +18,12 @@ return new class extends Migration
             $table->string('age');
             $table->json('answer')->nullable();
             $table->integer('score')->nullable();
-            $table->integer('group')->nullable();
+            $table->string('group')->nullable();
             $table->string('type')->nullable();
             $table->string('milk')->nullable();
             $table->integer('current')->default(0);
             $table->boolean('status')->default(false); 
+            $table->json('remark')->nullable();
             $table->timestamps();
 
         });

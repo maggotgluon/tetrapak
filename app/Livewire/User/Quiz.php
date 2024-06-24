@@ -11,13 +11,17 @@ class Quiz extends Component
 {
     public $score;
     public $current;
+    public $page=1;
     public $answer=[];
     
     public answers $client_answer;
 
     public function mount(answers $client_answer=null){
         if($client_answer){
-            // dd($client_answer);
+            if($client_answer->status == 1){
+                return redirect(route('ClientResult',['result'=>$this->client_answer->group,
+                        "name"=>$this->client_answer->name]));
+            }
             // $this->client_answer = answers::find($client_answer);
             // $this->id=$client_answer->id->uuid;
             $this->score=$client_answer->score;
@@ -32,6 +36,8 @@ class Quiz extends Component
     }
     public function render()
     {
+        // update color name
+        
         return view('livewire.user.quiz');
     }
 
@@ -40,7 +46,7 @@ class Quiz extends Component
     }
 
     public function ansScore($quiz, $ans,$score){
-        
+        $this->page+=1;
         $this->score+=$score;
         $this->current=$quiz+1;
         $this->answer[$quiz]=$ans;
@@ -127,12 +133,14 @@ class Quiz extends Component
                         
                         $this->score-=$score;
                         $this->client_answer->milk =  $this->answer['milk'];
+                        $this->client_answer->group = "2-".$this->answer['score']."-".$this->answer['type'];
+                        $this->client_answer->status = TRUE;
                         $this->client_answer->save();
 
-                        return redirect(route('ClientResult',[
-                            'result'=>"2-".$this->answer['score']."-".$this->answer['type'],
-                            "name"=>$this->client_answer->name
-                        ]));
+                        // return redirect(route('ClientResult',[
+                        //     'result'=>"2-".$this->answer['score']."-".$this->answer['type'],
+                        //     "name"=>$this->client_answer->name
+                        // ]));
                         dd("2 คะแนน ไปเลือกแบรนด์นมอัลมอนด์ในข้อถัดไป");
                         // 2
                         break;
@@ -142,6 +150,8 @@ class Quiz extends Component
                         $this->answer['milk']='macadamia';
                         
                         $this->client_answer->milk =  $this->answer['milk'];
+                        $this->client_answer->status = TRUE;
+                        $this->client_answer->group = "1-".$this->answer['type'];
                         $this->client_answer->save();
                         return redirect(route('ClientResult',['result'=>"1-" . $this->answer['type'],
                         "name"=>$this->client_answer->name ] ) );
@@ -156,9 +166,11 @@ class Quiz extends Component
                         $this->answer['milk']='oat';
                         
                         $this->client_answer->milk =  $this->answer['milk'];
+                        $this->client_answer->status = TRUE;
+                        $this->client_answer->group = "4-".$this->answer['score']."-".$this->answer['type'];
                         $this->client_answer->save();
-                        return redirect(route('ClientResult',['result'=>"4-1-".$this->answer['type'],
-                        "name"=>$this->client_answer->name]));
+                        // return redirect(route('ClientResult',['result'=>$this->client_answer->group,
+                        // "name"=>$this->client_answer->name]));
                         dd("2 คะแนน ไปชุดคําถาม 'นมโอ๊ต'");
                         // 4
                         break;
@@ -168,9 +180,11 @@ class Quiz extends Component
                         $this->answer['milk']='pistachio';
                         
                         $this->client_answer->milk =  $this->answer['milk'];
+                        $this->client_answer->status = TRUE;
+                        $this->client_answer->group = "3-1-".$this->answer['type'];
                         $this->client_answer->save();
-                        return redirect(route('ClientResult',['result'=>"3-1-".$this->answer['type'],
-                        "name"=>$this->client_answer->name]));
+                        // return redirect(route('ClientResult',['result'=>"3-1-".$this->answer['type'],
+                        // "name"=>$this->client_answer->name]));
                         dd("0-1 คะแนน ไปชุดคําถาม 'นมพิสตาชิโอ'");  
                         // 3
                         break;

@@ -1,4 +1,4 @@
-<div class="grid gap-2 min-h-svh overflow-scroll h-full bg-[#FFF2DC] px-4 xs:px-1">
+<div class="grid gap-2 min-h-svh overflow-clip h-full bg-[#FFF2DC] px-4 xs:px-1">
     <div style="background: url({{ asset('img/Q0-1.png') }}) center bottom; background-size:contain; background-repeat: no-repeat;" 
     class="relative">
         <h1 class="text-center text-2xl pt-24">คุณเป็น <b>‘คนช่างเลือก’</b> <br>แบบไหน ?</h1>
