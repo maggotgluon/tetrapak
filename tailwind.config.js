@@ -13,8 +13,8 @@ module.exports = {
         },
         
         fontSize: {
-            sm: ['clamp(0.8rem,0.9rem,1rem)','clamp(0.9rem,1rem,1.25rem)'],
-            base: ['clamp(0.8rem,0.9rem,1rem)','clamp(0.9rem,1rem,1.25rem)'],
+            sm: ['clamp(1rem,1.2rem,1.5rem)','clamp(0.9rem,1rem,1.25rem)'],
+            base: ['clamp(1rem,1.2rem,1.5rem)','clamp(0.9rem,1rem,1.25rem)'],
             xl: '1.25rem',
             '2xl': '1.5rem',
             '3xl': ['clamp(2rem,2.5rem,3rem)','clamp(1.5rem,1.8rem,2.5rem)'],

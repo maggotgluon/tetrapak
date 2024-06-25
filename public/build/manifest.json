@@ -3,10 +3,6 @@
     "file": "assets/DB HeaventRounded Bd v3.2.1-C9gC8A9N.ttf",
     "src": "resources/fonts/DB HeaventRounded Bd v3.2.1.ttf"
   },
-  "resources/fonts/DB HeaventRounded Med Cond v3.2.1.ttf": {
-    "file": "assets/DB HeaventRounded Med Cond v3.2.1-Bkhp9aM7.ttf",
-    "src": "resources/fonts/DB HeaventRounded Med Cond v3.2.1.ttf"
-  },
   "resources/fonts/DB HeaventRounded Med v3.2.1.ttf": {
     "file": "assets/DB HeaventRounded Med v3.2.1-DGW86rP-.ttf",
     "src": "resources/fonts/DB HeaventRounded Med v3.2.1.ttf"
@@ -18,14 +14,6 @@
   "resources/fonts/db_heaventrounded_bd_v3.2.1-webfont.woff2": {
     "file": "assets/db_heaventrounded_bd_v3.2.1-webfont-wh6abxGt.woff2",
     "src": "resources/fonts/db_heaventrounded_bd_v3.2.1-webfont.woff2"
-  },
-  "resources/fonts/db_heaventrounded_med_cond_v3.2.1-webfont.woff": {
-    "file": "assets/db_heaventrounded_med_cond_v3.2.1-webfont-DmVuH57x.woff",
-    "src": "resources/fonts/db_heaventrounded_med_cond_v3.2.1-webfont.woff"
-  },
-  "resources/fonts/db_heaventrounded_med_cond_v3.2.1-webfont.woff2": {
-    "file": "assets/db_heaventrounded_med_cond_v3.2.1-webfont-BOi1DJ1l.woff2",
-    "src": "resources/fonts/db_heaventrounded_med_cond_v3.2.1-webfont.woff2"
   },
   "resources/fonts/db_heaventrounded_med_v3.2.1-webfont.woff": {
     "file": "assets/db_heaventrounded_med_v3.2.1-webfont-C6fg_2FY.woff",
@@ -41,7 +29,7 @@
     "isEntry": true
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-CwuETr0C.css",
+    "file": "assets/app-DawnuUjV.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }

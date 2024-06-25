@@ -177,9 +177,17 @@
 
                     <h2 class="text-main text-3xl text-center">เจอเพื่อนๆ ทั้งที แชร์เรื่องราวดีๆ ให้เพื่อนๆ ฟัง</h2>
                     
-                    <div class="absolute top-[75%] w-full text-center">
-                        <x-button flat rounded class="" wire:click="ansScore('0','',0)" >
-                        <p class="text-3xl">TRICK ดูแลตัวเองแบบคนช่างเลือก</p>
+                    <div class="absolute top-[68%] left-0 px-5% w-full text-center">
+
+                        <x-button flat rounded class="!bg-gradient-to-b from-[#A87C4D] to-[#BF9768] !p-1 
+                            hover:to-[#A87C4D] hover:from-[#BF9768] transition-all w-full h-16" 
+                            wire:click="ansScore('0','',0)">
+                                <div class="bg-gradient-to-b from-[#C3996B] to-[#AA7E51] 
+                                hover:from-[#AA7E51] hover:to-[#AA7E51] transition-all w-full h-full rounded-full py-3 px-5 
+                                text-white text-2xl grid place-content-center">
+                                TRICK ดูแลตัวเองแบบคนช่างเลือก
+                                </div>
+                        
                         </x-button>
                     </div>
                 </div>
