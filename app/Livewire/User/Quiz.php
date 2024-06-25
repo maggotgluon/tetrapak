@@ -160,7 +160,7 @@ class Quiz extends Component
                 }
             }else{
                 switch (true) {
-                    case ($this->answer[6]=='a' || $this->answer[6]=='c') && ($this->answer[7]=='c' || $this->answer[7]=='d') :
+                    case (($this->answer[6]=='a' || $this->answer[6]=='c') && ($this->answer[7]=='c' || $this->answer[7]=='d')) :
                         # code...
                         $this->answer['milk']='oat';
                         $this->client_answer->milk =  $this->answer['milk'];
@@ -176,7 +176,6 @@ class Quiz extends Component
                     default:
                         # code...
                         $this->answer['milk']='pistachio';
-                        
                         $this->client_answer->milk =  $this->answer['milk'];
                         $this->client_answer->save();
                         // return redirect(route('ClientResult',['result'=>"3-1-".$this->answer['type'],
