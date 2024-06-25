@@ -127,7 +127,8 @@ class Quiz extends Component
         } elseif($quiz == 7 ){
             if($this->answer['group']==1){
                 switch (true) {
-                    case ($this->answer[6]=='a' || $this->answer[6]=='c') && ($this->answer[7]=='a' || $this->answer[7]=='c') :
+                    case (($this->answer[6]=='a' || $this->answer[6]=='c') 
+                        && ($this->answer[7]=='a' || $this->answer[7]=='c')) :
                         # code...
                         $this->answer['milk']='almond';
                         $this->client_answer->milk =  $this->answer['milk'];
