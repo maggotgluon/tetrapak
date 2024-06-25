@@ -4,7 +4,7 @@
         @case(1)
             <div style="background: url({{ asset('img/Q0-1.png') }}) center bottom; background-size:contain; background-repeat: no-repeat;"
                 class="relative">
-                <h1 class="text-center text-2xl pt-24">คุณเป็น <b>‘คนช่างเลือก’</b> <br>แบบไหน ?</h1>
+                <h1 class="text-center text-3xl pt-24">คุณเป็น <b>‘คนช่างเลือก’</b> <br>แบบไหน ?</h1>
                 {{-- <x-button label="next" :href="route('ClientProfile')"/> --}}
                 <div class="absolute bottom-28 w-full text-center">
                     <x-button flat rounded class="!bg-gradient-to-b from-primary-100 to-primary-200 !p-1 
@@ -24,10 +24,10 @@
             <div class="relative">
                 <h1 class="text-center text-2xl pt-24">หนังสือให้ความยินยอมสำหรับลูกค้า<br>
                     (Customer Consent Form)</h1>
-                <div class="p-6 pt-12 w-11/12 m-auto flex-grow max-h-[65vh]"
+                <div class="p-6 pt-8 w-11/12 m-auto flex-grow max-h-[65vh]"
                     style="background: url({{ asset('img/frame.png') }}) center top; 
                 background-size:contain; background-repeat: no-repeat;">
-                    <div class="p-2 mx-2 overflow-y-scroll h-[55vh] text-2xs">
+                    <div class="p-2 mx-2 overflow-y-scroll h-[55vh] text-xs">
                         <p>บริษัท ครีเอเทกซ์ เฮาส์ จำกัด (“ครีเอเทกซ์ เฮาส์ ”) เห็นความสำคัญในการคุ้มครองข้อมูลส่วนบุคคลของท่าน
                             ตามที่กำหนดไว้ใน
                             พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคลพ.ศ. 2562 ครีเอเทกซ์ เฮาส์

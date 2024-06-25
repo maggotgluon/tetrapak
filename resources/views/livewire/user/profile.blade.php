@@ -9,11 +9,11 @@
             class="relative">
                 {{-- <form wire:submit.prevent="goQuiz" class="grid gap-2 min-h-svh h-full"> --}}
                 <div class="absolute top-[50%] w-full px-[16%]">
-                    <input class="bg-transparent rounded-full w-full text-3xl border-0 text-center"
+                    <input class="bg-gradient-to-br from-slate-300 to-slate-50 rounded-full w-full text-3xl border-0 text-center"
                         wire:model.live="name" type="text" min="1" max="20" placeholder="ชื่อ"/>
                 </div>
                 <div class="absolute top-[62%] w-full px-[16%]">
-                    <input class="bg-transparent rounded-full w-full text-3xl border-0 text-center"
+                    <input class="bg-gradient-to-br from-slate-300 to-slate-50 rounded-full w-full text-3xl border-0 text-center"
                         wire:model.live="age" type="number" min="1" max="99" placeholder="อายุ"/>
                 </div>
                 

@@ -177,7 +177,7 @@
 
                     <h2 class="text-main text-3xl text-center">เจอเพื่อนๆ ทั้งที แชร์เรื่องราวดีๆ ให้เพื่อนๆ ฟัง</h2>
                     
-                    <div class="absolute top-[68%] left-0 px-5% w-full text-center">
+                    <div class="absolute top-[68%] left-0 px-[5%] w-full text-center">
 
                         <x-button flat rounded class="!bg-gradient-to-b from-[#A87C4D] to-[#BF9768] !p-1 
                             hover:to-[#A87C4D] hover:from-[#BF9768] transition-all w-full h-16" 
