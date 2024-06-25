@@ -125,23 +125,6 @@
         @break
 
         @case(4)
-            <div class="h-full min-h-svh flex flex-col relative"
-                style="background: url({{ asset('img/story3.jpg') }}) center top; 
-                    background-size:contain; background-repeat: no-repeat;">
-                <div class="p-6 pt-12 w-11/12 m-auto flex-grow">
-
-                    <h2 class="text-main text-3xl text-center">เจอเพื่อนๆ ทั้งที แชร์เรื่องราวดีๆ ให้เพื่อนๆ ฟัง</h2>
-                    
-                    <div class="absolute top-[75%] w-full text-center">
-                        <x-button flat rounded class="" wire:click="ansScore('0','',0)" >
-                        <p class="text-3xl">ต่อไป</p>
-                        </x-button>
-                    </div>
-                </div>
-            </div>
-        @break 
-
-        @case(5)
             <div class="h-full min-h-svh flex flex-col relative">
                 <img src="{{ asset('img/Q4-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                 <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
@@ -177,6 +160,23 @@
                 <img src="{{ asset('img/Q4-bottom.png') }}" class="w-2/6 absolute bottom-10" />
             </div>
         @break
+
+        @case(5)
+            <div class="h-full min-h-svh flex flex-col relative"
+                style="background: url({{ asset('img/story3.jpg') }}) center top; 
+                    background-size:contain; background-repeat: no-repeat;">
+                <div class="p-6 pt-12 w-11/12 m-auto flex-grow">
+
+                    <h2 class="text-main text-3xl text-center">เจอเพื่อนๆ ทั้งที แชร์เรื่องราวดีๆ ให้เพื่อนๆ ฟัง</h2>
+                    
+                    <div class="absolute top-[75%] w-full text-center">
+                        <x-button flat rounded class="" wire:click="ansScore('0','',0)" >
+                        <p class="text-3xl">ต่อไป</p>
+                        </x-button>
+                    </div>
+                </div>
+            </div>
+        @break 
 
         @case(6)
             <div class="h-full min-h-svh flex flex-col relative">
@@ -217,10 +217,8 @@
     @endswitch
     
     @isset($answer['group'])
-    group
         @switch($answer['group'])
             @case(1)
-            1
                 @switch($page)
                     @case(7)
                         <div class="h-full min-h-svh flex flex-col relative">
@@ -321,7 +319,6 @@
             @break
 
             @case(2)
-            2
                 @switch($page)
                     @case(7)
                         <div class="h-full min-h-svh flex flex-col relative">

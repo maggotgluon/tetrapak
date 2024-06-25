@@ -130,17 +130,15 @@ class Quiz extends Component
                     case ($this->answer[6]=='a' || $this->answer[6]=='c') && ($this->answer[7]=='a' || $this->answer[7]=='c') :
                         # code...
                         $this->answer['milk']='almond';
-                        
-                        $this->score-=$score;
                         $this->client_answer->milk =  $this->answer['milk'];
-                        $this->client_answer->group = "2-".$this->answer['score']."-".$this->answer['type'];
-                        $this->client_answer->status = TRUE;
+                        // $this->client_answer->group = "2-".$this->answer['score']."-".$this->answer['type'];
+                        // $this->client_answer->status = TRUE;
                         $this->client_answer->save();
 
-                        return redirect(route('ClientResult',[
-                            'result'=>"2-".$this->answer['score']."-".$this->answer['type'],
-                            "name"=>$this->client_answer->name
-                        ]));
+                        // return redirect(route('ClientResult',[
+                        //     'result'=>"2-".$this->answer['score']."-".$this->answer['type'],
+                        //     "name"=>$this->client_answer->name
+                        // ]));
                         // dd("2 คะแนน ไปเลือกแบรนด์นมอัลมอนด์ในข้อถัดไป");
                         // 2
                         break;
@@ -153,7 +151,7 @@ class Quiz extends Component
                         $this->client_answer->status = TRUE;
                         $this->client_answer->group = "1-".$this->answer['type'];
                         $this->client_answer->save();
-                        return redirect(route('ClientResult',['result'=>"1-" . $this->answer['type'],
+                        return redirect(route('ClientResult',['result'=>$this->client_answer->group,
                         "name"=>$this->client_answer->name ] ) );
                         dd("0-1 คะแนน 'นมแมคคาเดเมีย'");
                         // 1
@@ -164,13 +162,12 @@ class Quiz extends Component
                     case ($this->answer[6]=='a' || $this->answer[6]=='c') && ($this->answer[7]=='c' || $this->answer[7]=='d') :
                         # code...
                         $this->answer['milk']='oat';
-                        
                         $this->client_answer->milk =  $this->answer['milk'];
-                        $this->client_answer->status = TRUE;
-                        $this->client_answer->group = "4-".$this->answer['score']."-".$this->answer['type'];
+                        // $this->client_answer->status = TRUE;
+                        // $this->client_answer->group = "4-".$this->answer['score']."-".$this->answer['type'];
                         $this->client_answer->save();
-                        return redirect(route('ClientResult',['result'=>$this->client_answer->group,
-                        "name"=>$this->client_answer->name]));
+                        // return redirect(route('ClientResult',['result'=>$this->client_answer->group,
+                        // "name"=>$this->client_answer->name]));
                         // dd("2 คะแนน ไปชุดคําถาม 'นมโอ๊ต'");
                         // 4
                         break;
@@ -180,11 +177,9 @@ class Quiz extends Component
                         $this->answer['milk']='pistachio';
                         
                         $this->client_answer->milk =  $this->answer['milk'];
-                        $this->client_answer->status = TRUE;
-                        $this->client_answer->group = "3-1-".$this->answer['type'];
                         $this->client_answer->save();
-                        return redirect(route('ClientResult',['result'=>"3-1-".$this->answer['type'],
-                        "name"=>$this->client_answer->name]));
+                        // return redirect(route('ClientResult',['result'=>"3-1-".$this->answer['type'],
+                        // "name"=>$this->client_answer->name]));
                         // dd("0-1 คะแนน ไปชุดคําถาม 'นมพิสตาชิโอ'");  
                         // 3
                         break;
@@ -193,7 +188,34 @@ class Quiz extends Component
             }
 
         } elseif($quiz == 8 ){
-            dd("8");
+            
+
+            switch ($this->answer['milk']) {
+                case ('almond') :
+                    $this->client_answer->status = TRUE;
+                    $this->client_answer->group = "2-".$this->answer[8]."-".$this->answer['type'];
+                    $this->client_answer->save();
+                    return redirect(route('ClientResult',['result'=>$this->client_answer->group,
+                        "name"=>$this->client_answer->name]));
+                break;
+                case ('oat') :
+                        $this->client_answer->status = TRUE;
+                        $this->client_answer->group = "4-".$this->answer[8]."-".$this->answer['type'];
+                        $this->client_answer->save();
+                        return redirect(route('ClientResult',['result'=>$this->client_answer->group,
+                            "name"=>$this->client_answer->name]));
+                break;
+                case ('pistachio') :
+                        $this->client_answer->status = TRUE;
+                        $this->client_answer->group = "3-".$this->answer[8]."-".$this->answer['type'];
+                        $this->client_answer->save();
+                        return redirect(route('ClientResult',['result'=>$this->client_answer->group,
+                            "name"=>$this->client_answer->name]));
+                break;
+                default:
+                break;
+                }
+
         }
     }
 }
