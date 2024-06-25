@@ -1,4 +1,5 @@
 <div class="grid gap-2 min-h-svh overflow-clip h-full bg-[#FFF2DC] px-4 xs:px-1">
+
     @switch($page)
         @case(1)
             <div style="background: url({{ asset('img/Q0-1.png') }}) center bottom; background-size:contain; background-repeat: no-repeat;"
@@ -6,9 +7,12 @@
                 <h1 class="text-center text-2xl pt-24">คุณเป็น <b>‘คนช่างเลือก’</b> <br>แบบไหน ?</h1>
                 {{-- <x-button label="next" :href="route('ClientProfile')"/> --}}
                 <div class="absolute bottom-28 w-full text-center">
-                    <x-button flat rounded class="!p-0 !m-auto" wire:click="nextPage">
-                        <div class="min-w-64 min-h-10 p-3 text-xl"
-                            style="background: url('{{ asset('img/Button.png') }}') top center no-repeat; background-size:contain">
+                    <x-button flat rounded class="!bg-gradient-to-b from-primary-100 to-primary-200 !p-1 
+                    hover:from-primary-300 hover:to-primary-400 w-60" 
+                        wire:click="nextPage">
+                        <div class="bg-gradient-to-b from-primary-200 to-primary-100 
+                        hover:from-primary-400 hover:to-primary-300 w-full h-full rounded-full py-3 px-5 
+                        text-white text-2xl">
                             คลิก
                         </div>
                     </x-button>
@@ -115,16 +119,25 @@
                     </div>
                 </div>
                 <div class="absolute bottom-18 w-full text-center grid grid-cols-2 gap-2">
-                    <x-button flat rounded class="bg-primary-100" href="{{ route('ClientProfile') }}">
-                        <div class="p-3 text-xl">
-                            ยินยอม
+                    <x-button flat rounded class="!bg-gradient-to-b from-primary-100 to-primary-200 !p-1 
+                    hover:from-primary-300 hover:to-primary-400 " 
+                    href="{{ route('ClientProfile') }}">
+                        <div class="bg-gradient-to-b from-primary-200 to-primary-100 
+                        hover:from-primary-400 hover:to-primary-300 w-full h-full rounded-full py-3 px-5 
+                        text-white text-2xl">
+                        ยินยอม
                         </div>
                     </x-button>
-                    <x-button flat rounded class="bg-primary-100" href="{{ route('home') }}">
-                        <div class="p-3 text-xl">
-                            ไม่ยินยอม
+                    <x-button flat rounded class="!bg-gradient-to-b from-primary-100 to-primary-200 !p-1 
+                    hover:from-primary-300 hover:to-primary-400 " 
+                    href="{{ route('home') }}">
+                        <div class="bg-gradient-to-b from-primary-200 to-primary-100 
+                        hover:from-primary-400 hover:to-primary-300 w-full h-full rounded-full py-3 px-5 
+                        text-white text-2xl">
+                        ไม่ยินยอม
                         </div>
                     </x-button>
+
                 </div>
             </div>
         @break

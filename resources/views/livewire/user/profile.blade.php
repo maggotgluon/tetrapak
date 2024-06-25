@@ -14,11 +14,18 @@
                 <div class="absolute top-[62%] w-full px-[20%]">
                     <x-input label="age" wire:model.live="age" type="number" min="1" max="99"/>
                 </div>
+                
                 <div class="absolute top-[75%] w-full px-[5%] text-center">
-                    <x-button flat rounded type="submit" wire:click="nextPage" class="w-full h-14">
-                        <div class="min-w-full min-h-10 p-3 text-2xl">
-                            let go
-                        </div>
+
+
+                    <x-button flat rounded class="!bg-gradient-to-b from-[#A87C4D] to-[#BF9768] !p-1 
+                        hover:to-[#A87C4D] hover:from-[#BF9768] transition-all w-full h-16" 
+                        wire:click="nextPage">
+                            <div class="bg-gradient-to-b from-[#C3996B] to-[#AA7E51] 
+                            hover:from-[#AA7E51] hover:to-[#AA7E51] transition-all w-full h-full rounded-full py-3 px-5 
+                            text-white text-2xl grid place-content-center">
+                            let's go
+                            </div>
                     </x-button>
                 </div>
                 {{-- <a wire:click="goQuiz"
@@ -34,8 +41,15 @@
                     class="relative bg-[#A2FAFF]">
                     
                     <div class="absolute top-[75%] w-full px-[20%] text-center">
-                        <x-button flat rounded class="!p-0 !m-auto" wire:click="nextPage">
-                                <p class="text-3xl">ต่อไป</p>
+
+                        <x-button flat rounded class="!bg-gradient-to-b from-[#A87C4D] to-[#BF9768] !p-1 
+                            hover:to-[#A87C4D] hover:from-[#BF9768] transition-all w-full h-16" 
+                            wire:click="nextPage">
+                                <div class="bg-gradient-to-b from-[#C3996B] to-[#AA7E51] 
+                                hover:from-[#AA7E51] hover:to-[#AA7E51] transition-all w-full h-full rounded-full py-3 px-5 
+                                text-white text-3xl grid place-content-center">
+                                ต่อไป
+                                </div>
                         </x-button>
                     </div>
                 </div>
@@ -46,8 +60,15 @@
                     class="relative">
                     
                     <div class="absolute top-[75%] w-full px-[20%] text-center">
-                        <x-button flat rounded class="!p-0 !m-auto" wire:click="goQuiz">
-                            <p class="text-3xl">พร้อมแล้วไปกันเลย</p>
+
+                        <x-button flat rounded class="!bg-gradient-to-b from-[#A87C4D] to-[#BF9768] !p-1 
+                            hover:to-[#A87C4D] hover:from-[#BF9768] transition-all w-full h-16" 
+                            wire:click="goQuiz">
+                                <div class="bg-gradient-to-b from-[#C3996B] to-[#AA7E51] 
+                                hover:from-[#AA7E51] hover:to-[#AA7E51] transition-all w-full h-full rounded-full py-3 px-5 
+                                text-white text-3xl grid place-content-center">
+                                พร้อมแล้วไปกันเลย
+                                </div>
                         </x-button>
                     </div>
                 </div>
