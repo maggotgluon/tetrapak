@@ -1,9 +1,4 @@
 <div class=" h-full bg-[#FFF2DC] px-4 xs:px-1">
-    <div class="fixed top-1 left-1 max-w-sm z-50 bg-white/50">
-        score : {{ $score }}<br>
-        {{ var_dump($answer) }}
-        1234
-    </div>
     <div class="pt-4">
         <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
             <div class="h-2 bg-primary-{{ $current }}00 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
@@ -171,7 +166,7 @@
                     
                     <div class="absolute top-[75%] w-full text-center">
                         <x-button flat rounded class="" wire:click="ansScore('0','',0)" >
-                        <p class="text-3xl">ต่อไป</p>
+                        <p class="text-3xl">TRICK ดูแลตัวเองแบบคนช่างเลือก</p>
                         </x-button>
                     </div>
                 </div>
@@ -256,27 +251,12 @@
 
                     @case(8)
                         <div class="h-full min-h-svh flex flex-col relative">
-                            <img src="{{ asset('img/Q8-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
+                            <img src="{{ asset('img/Q7-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                             <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                                 style="background: url({{ asset('img/frame.png') }}) center top; 
                                 background-size:contain; background-repeat: no-repeat;">
 
-
-<h2 class="text-main text-3xl text-center">อะไรที่ทําให้คุณมี ‘ความมั่นใจ’</h2>
-                    <ul>
-                        <li><x-button class="bg-variantsA-200 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="A. ผิวอิ่มฟู ดูชุ่มชื้น (1 คะแนน)" wire:click="ansScore('7','a',1)" /></li>
-                        <li><x-button class="bg-variantsA-200 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="B. ยิ้มสวยมั่นใจไร้ริ้วรอย (0 คะแนน)" wire:click="ansScore('7','b',0)" /></li>
-                        <li><x-button class="bg-variantsA-200 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="C. ผิวฉ่ำใสไม่มีดรอป (1 คะแนน)" wire:click="ansScore('7','c',1)" /></li>
-                        <li><x-button class="bg-variantsA-200 text-white hover:!bg-primary-100/5 w-full" rounded
-                                label="D. หน้าเด็กดูอ่อนกว่าวัย (0 คะแนน)" wire:click="ansScore('7','d',0)" /></li>
-                    </ul>
-
-
-
-                                <h2 class="text-main text-3xl text-center">อะไรที่ทําให้คุณมี ‘ความมั่นใจ’</h2>
+                                <h2 class="text-main text-3xl text-center">ให้คุณเลือก 1 ข้อ ที่จะทำให้คุณมั่นใจ</h2>
                                 <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                                 <ul class="grid gap-4">
@@ -299,7 +279,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q8-1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                            <img src="{{ asset('img/Q7-1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
                         </div>
                     @break
 
@@ -310,7 +290,7 @@
                                 style="background: url({{ asset('img/frame.png') }}) center top; 
                                 background-size:contain; background-repeat: no-repeat;">
 
-                                <h2 class="text-main text-3xl text-center">ให้คุณเลือก 1 ข้อ ท่ีตรงกับตัวคุณมากที่สุด</h2>
+                                <h2 class="text-main text-3xl text-center">ให้คุณเลือก 1 ข้อ ที่ตรงกับตัวคุณมากที่สุด</h2>
                                 <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                                 <ul class="grid gap-4">
