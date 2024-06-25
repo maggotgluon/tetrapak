@@ -24,7 +24,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 
-    <body class="h-screen bg-[#FFF2DC]">
+    <body class="h-screen bg-[#FFF2DC] !font-db_heaventrounded">
         <x-notifications z-index="z-50" />
         @yield('body')
     </body>

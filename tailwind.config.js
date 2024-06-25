@@ -6,14 +6,20 @@ module.exports = {
         require('./vendor/wireui/wireui/tailwind.config.js')
     ],
     theme: {
+        fontFamily: {
+            db_heaventrounded: ['db_heaventrounded',...defaultTheme.fontFamily.sans],
+            sans: ['db_heaventrounded', ...defaultTheme.fontFamily.sans],
+            default: ['db_heaventrounded', ...defaultTheme.fontFamily.sans],
+        },
+        
         fontSize: {
             sm: ['clamp(0.8rem,0.9rem,1rem)','clamp(0.9rem,1rem,1.25rem)'],
             base: ['clamp(0.8rem,0.9rem,1rem)','clamp(0.9rem,1rem,1.25rem)'],
             xl: '1.25rem',
-            '2xl': '1.563rem',
-            '3xl': ['clamp(1.1rem,1.5rem,1.9rem)','clamp(1.5rem,1.8rem,2.5rem)'],
-            '4xl': '2.441rem',
-            '5xl': '3.052rem',
+            '2xl': '1.5rem',
+            '3xl': ['clamp(2rem,2.5rem,3rem)','clamp(1.5rem,1.8rem,2.5rem)'],
+            '4xl': '5rem',
+            '5xl': '5rem',
         },
         extend: {
             fontFamily: {
