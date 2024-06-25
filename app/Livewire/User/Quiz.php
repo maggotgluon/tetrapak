@@ -193,21 +193,21 @@ class Quiz extends Component
             switch ($this->answer['milk']) {
                 case ('almond') :
                     $this->client_answer->status = TRUE;
-                    $this->client_answer->group = "2-".$this->answer[8]."-".$this->answer['type'];
+                    $this->client_answer->group = "2-".$score."-".$this->answer['type'];
                     $this->client_answer->save();
                     return redirect(route('ClientResult',['result'=>$this->client_answer->group,
                         "name"=>$this->client_answer->name]));
                 break;
                 case ('oat') :
                         $this->client_answer->status = TRUE;
-                        $this->client_answer->group = "4-".$this->answer[8]."-".$this->answer['type'];
+                        $this->client_answer->group = "4-".$score."-".$this->answer['type'];
                         $this->client_answer->save();
                         return redirect(route('ClientResult',['result'=>$this->client_answer->group,
                             "name"=>$this->client_answer->name]));
                 break;
                 case ('pistachio') :
                         $this->client_answer->status = TRUE;
-                        $this->client_answer->group = "3-".$this->answer[8]."-".$this->answer['type'];
+                        $this->client_answer->group = "3-".$score."-".$this->answer['type'];
                         $this->client_answer->save();
                         return redirect(route('ClientResult',['result'=>$this->client_answer->group,
                             "name"=>$this->client_answer->name]));

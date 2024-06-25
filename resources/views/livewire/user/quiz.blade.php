@@ -406,11 +406,11 @@
                                     <li>
                                         <x-button rounded class="bg-variantsB-400 text-white hover:!bg-primary-100/5 w-full"
                                             label="B. การเป็นตัวเองนั่นแหละ คือเวอร์ชันที่ดีที่สุดแล้ว"
-                                            wire:click="ansScore('8','b',1)" />
+                                            wire:click="ansScore('8','b',2)" />
                                     </li>
                                     <li>
                                         <x-button rounded class="bg-variantsB-400 text-white hover:!bg-primary-100/5 w-full"
-                                            label="C. สายหวาน นุ่มนวล ยิ้มรับทุกสถานการณ์" wire:click="ansScore('8','b',1)" />
+                                            label="C. สายหวาน นุ่มนวล ยิ้มรับทุกสถานการณ์" wire:click="ansScore('8','b',3)" />
                                     </li>
                                 </ul>
 
