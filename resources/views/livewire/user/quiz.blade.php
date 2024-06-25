@@ -216,9 +216,11 @@
         
     @endswitch
     
-    @isset($group)
-        @switch($group)
+    @isset($answer['group'])
+    group
+        @switch($answer['group'])
             @case(1)
+            1
                 @switch($page)
                     @case(7)
                         <div class="h-full min-h-svh flex flex-col relative">
@@ -319,6 +321,7 @@
             @break
 
             @case(2)
+            2
                 @switch($page)
                     @case(7)
                         <div class="h-full min-h-svh flex flex-col relative">

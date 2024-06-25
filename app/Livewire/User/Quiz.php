@@ -193,7 +193,7 @@ class Quiz extends Component
             }
 
         } elseif($quiz == 8 ){
-
+            dd("8");
         }
     }
 }
