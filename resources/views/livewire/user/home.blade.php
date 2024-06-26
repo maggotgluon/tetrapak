@@ -2,8 +2,9 @@
 
     @switch($page)
         @case(1)
-            <div style="background: url({{ asset('img/Q0-1.png') }}) center bottom; background-size:contain; background-repeat: no-repeat;"
+            <div style="background: url({{ asset('img/Q0-1.jpg') }}) center bottom; background-size:contain; background-repeat: no-repeat;"
                 class="relative">
+                <img src="{{asset('img/logo.png')}}" class="absolute top-2 right-2 w-10"/>
                 <h1 class="text-center text-3xl pt-24">คุณเป็น <b>‘คนช่างเลือก’</b> <br>แบบไหน ?</h1>
                 {{-- <x-button label="next" :href="route('ClientProfile')"/> --}}
                 <div class="absolute bottom-28 w-full text-center">

@@ -15,6 +15,8 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles

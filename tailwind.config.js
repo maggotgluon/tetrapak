@@ -17,7 +17,7 @@ module.exports = {
             base: ['clamp(1rem,1.2rem,1.5rem)','clamp(0.9rem,1rem,1.25rem)'],
             xl: '1.25rem',
             '2xl': '1.5rem',
-            '3xl': ['clamp(2rem,2.5rem,3rem)','clamp(1.5rem,1.8rem,2.5rem)'],
+            '3xl': 'clamp(2rem,2.5rem,3rem)',
             '4xl': '5rem',
             '5xl': '5rem',
         },

@@ -53,7 +53,7 @@
                     </ul>
 
                 </div>
-                <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/3 absolute bottom-10" />
             </div>
         @break
 
@@ -91,7 +91,7 @@
                     </ul>
 
                 </div>
-                <img src="{{ asset('img/Q2-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                <img src="{{ asset('img/Q2-bottom.png') }}" class="w-2/3 absolute bottom-10" />
             </div>
         @break
 
@@ -128,7 +128,7 @@
                     </ul>
 
                 </div>
-                <img src="{{ asset('img/Q3-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                <img src="{{ asset('img/Q3-bottom.png') }}" class="w-2/3 absolute bottom-10" />
             </div>
         @break
 
@@ -165,7 +165,7 @@
                     </ul>
 
                 </div>
-                <img src="{{ asset('img/Q4-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                <img src="{{ asset('img/Q4-bottom.png') }}" class="w-2/3 absolute bottom-10" />
             </div>
         @break
 
@@ -224,7 +224,7 @@
                     </ul>
 
                 </div>
-                <img src="{{ asset('img/Q5-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                <img src="{{ asset('img/Q5-bottom.png') }}" class="w-2/3 absolute bottom-10" />
             </div>
         @break
 
@@ -266,7 +266,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q6-1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                            <img src="{{ asset('img/Q6-1-bottom.png') }}" class="w-2/3 absolute bottom-10" />
                         </div>
                     @break
 
@@ -300,7 +300,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q7-1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                            <img src="{{ asset('img/Q7-1-bottom.png') }}" class="w-2/3 absolute bottom-10" />
                         </div>
                     @break
 
@@ -330,7 +330,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q8-1-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                            <img src="{{ asset('img/Q8-1-bottom.png') }}" class="w-2/3 absolute bottom-10" />
                         </div>
                     @break
 
@@ -370,7 +370,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q6-2-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                            <img src="{{ asset('img/Q6-2-bottom.png') }}" class="w-2/3 absolute bottom-10" />
                         </div>
                     @break
 
@@ -404,7 +404,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q7-2-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                            <img src="{{ asset('img/Q7-2-bottom.png') }}" class="w-2/3 absolute bottom-10" />
                         </div>
                     @break
 
@@ -435,7 +435,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q8-2-bottom.png') }}" class="w-2/6 absolute bottom-10" />
+                            <img src="{{ asset('img/Q8-2-bottom.png') }}" class="w-2/3 absolute bottom-10" />
                         </div>
                     @break
 
