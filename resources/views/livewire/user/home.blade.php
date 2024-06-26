@@ -1,4 +1,4 @@
-<div class="grid gap-2 min-h-svh overflow-clip h-full bg-[#FFF2DC] px-4 xs:px-1  outline-2 outline-dashed outline-green-500">
+<div class="grid gap-2 min-h-svh overflow-clip h-full bg-[#FFF2DC] px-4 xs:px-1 ">
 
     @switch($page)
         @case(1)
