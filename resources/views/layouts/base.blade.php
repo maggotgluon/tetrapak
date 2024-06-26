@@ -10,6 +10,13 @@
             <title>{{ config('app.name') }}</title>
         @endif
 
+
+        <meta property="og:title" content="มาเล่น Quiz ที่จะบอกว่าคุณเป็นคนช่างเลือกแบบไหนกัน" />
+        {{-- <meta property="og:description" content="มาเล่น Quiz ที่จะบอกว่าคุณเป็นคนช่างเลือกแบบไหนกัน" /> --}}
+        <meta property="og:type" content="game.quiz" />
+        <meta property="og:url" content="{{env('APP_URL')}}" />
+        <meta property="og:image" content="{{asset('img/og_image.jpg')}}" />
+
         <!-- Favicon -->
 		<link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">
 
