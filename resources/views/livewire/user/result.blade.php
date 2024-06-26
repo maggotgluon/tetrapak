@@ -23,8 +23,8 @@
             
                 html2canvas(document.getElementById('result'), {
                     onrendered: function(canvas) {
-                        var imgData = canvas.toDataURL('image/jpg').replace("image/jpg",
-                        "image/octet-stream");
+                        var imgData = canvas.toDataURL('image/jpeg')
+                        
                         console.log('load canvas'+'imgData');
 
                         var a = document.createElement('a');

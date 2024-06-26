@@ -1,20 +1,20 @@
 <div class=" h-full bg-[#FFF2DC] px-4 xs:px-1">
-    <div class="pt-4">
-        <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
-            <div class="h-2 bg-primary-{{ $current }}00 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
-            </div>
-        </div>
-        <p class="text-2xs"><span class="text-primary-{{ $current }}00"> {{ $current }} </span>/ 8 </p>
-    </div>
     @switch($page)
         @case(1)
+        <div class="pt-4">
+            <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                <div class="h-2 bg-primary-{{ $current }}00 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                </div>
+            </div>
+            <p class="text-2xs"><span class="text-primary-{{ $current }}00"> {{ $current }} </span>/ 8 </p>
+        </div>
             <div class="h-full min-h-svh flex flex-col relative">
                 <img src="{{ asset('img/Q1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                 <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                     style="background: url({{ asset('img/frame.png') }}) center top; 
                 background-size:contain; background-repeat: no-repeat;">
 
-                    <h2 class="text-main text-3xl text-center">เมื่อคุณจะไปเที่ยวทะเล คุณจะเลือกแต่งตัวแบบไหน</h2>
+                    <h2 class="text-main text-3xl text-center">เมื่อคุณจะไป<b>เที่ยวทะเล</b><br> คุณจะเลือก<b>แต่งตัว</b>แบบไหน</h2>
                     <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                     <ul class="grid gap-4">
@@ -58,13 +58,20 @@
         @break
 
         @case(2)
+        <div class="pt-4">
+            <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                <div class="h-2 bg-primary-{{ $current }}00 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                </div>
+            </div>
+            <p class="text-2xs"><span class="text-primary-{{ $current }}00"> {{ $current }} </span>/ 8 </p>
+        </div>
             <div class="h-full min-h-svh flex flex-col relative">
                 <img src="{{ asset('img/Q2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                 <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                     style="background: url({{ asset('img/frame.png') }}) center top; 
                 background-size:contain; background-repeat: no-repeat;">
 
-                    <h2 class="text-main text-3xl text-center">โรงแรมแบบไหนที่คุณจะเลือกพัก ในทริปเที่ยวทะเลครั้งนี้</h2>
+                    <h2 class="text-main text-3xl text-center"><b>โรงแรม</b>แบบไหนที่คุณจะเลือกพัก<br> ในทริป<b>เที่ยวทะเล</b>ครั้งนี้</h2>
                     <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                     <ul class="grid gap-4">
@@ -96,13 +103,20 @@
         @break
 
         @case(3)
+        <div class="pt-4">
+            <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                <div class="h-2 bg-primary-{{ $current }}00 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                </div>
+            </div>
+            <p class="text-2xs"><span class="text-primary-{{ $current }}00"> {{ $current }} </span>/ 8 </p>
+        </div>
             <div class="h-full min-h-svh flex flex-col relative">
                 <img src="{{ asset('img/Q3-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                 <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                     style="background: url({{ asset('img/frame.png') }}) center top; 
                 background-size:contain; background-repeat: no-repeat;">
 
-                    <h2 class="text-main text-3xl text-center">คุณเลือกจะกินอะไร ในทริปเที่ยวครั้งนี้</h2>
+                    <h2 class="text-main text-3xl text-center">คุณเลือกจะ<b>กิน</b>อะไร<br> ใน<b>ทริปเที่ยว</b>ครั้งนี้</h2>
                     <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                     <ul class="grid gap-4">
@@ -133,13 +147,20 @@
         @break
 
         @case(4)
+        <div class="pt-4">
+            <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                <div class="h-2 bg-primary-{{ $current }}00 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                </div>
+            </div>
+            <p class="text-2xs"><span class="text-primary-{{ $current }}00"> {{ $current }} </span>/ 8 </p>
+        </div>
             <div class="h-full min-h-svh flex flex-col relative">
                 <img src="{{ asset('img/Q4-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                 <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                     style="background: url({{ asset('img/frame.png') }}) center top; 
                 background-size:contain; background-repeat: no-repeat;">
 
-                    <h2 class="text-main text-3xl text-center">คุณเลือกเครื่องดื่มอะไร ในทริปเที่ยวทะเลครั้งนี้</h2>
+                    <h2 class="text-main text-3xl text-center">คุณเลือก<b>เครื่องดื่ม</b>อะไร ในทริป<b>เที่ยวทะเล</b>ครั้งนี้</h2>
                     <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                     <ul class="grid gap-4">
@@ -175,7 +196,7 @@
                     background-size:contain; background-repeat: no-repeat;">
                 <div class="p-6 pt-12 w-11/12 m-auto flex-grow">
 
-                    <h2 class="text-main text-3xl text-center">เจอเพื่อนๆ ทั้งที แชร์เรื่องราวดีๆ ให้เพื่อนๆ ฟัง</h2>
+                    <h2 class="text-main text-3xl text-center"><b>เจอเพื่อนๆ ทั้งที</b> <br>แชร์เรื่องราวดีๆ ให้เพื่อนๆ ฟัง</h2>
                     
                     <div class="absolute bottom-[25%] left-0 px-[5%] w-full text-center">
 
@@ -195,13 +216,20 @@
         @break 
 
         @case(6)
+        <div class="pt-4">
+            <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                <div class="h-2 bg-primary-{{ $current }}00 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                </div>
+            </div>
+            <p class="text-2xs"><span class="text-primary-{{ $current }}00"> {{ $current }} </span>/ 8 </p>
+        </div>
             <div class="h-full min-h-svh flex flex-col relative">
                 <img src="{{ asset('img/Q5-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                 <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                     style="background: url({{ asset('img/frame.png') }}) center top; 
                 background-size:contain; background-repeat: no-repeat;">
 
-                    <h2 class="text-main text-3xl text-center">คุณเลือกที่จะ ดูแลตัวเองด้วยวิธีไหน </h2>
+                    <h2 class="text-main text-3xl text-center">คุณเลือกที่จะ<br> <b>ดูแลตัวเอง</b>ด้วยวิธีไหน </h2>
                     <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                     <ul class="grid gap-4">
@@ -237,13 +265,20 @@
             @case(1)
                 @switch($page)
                     @case(7)
+                    <div class="pt-4">
+                        <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                            <div class="h-2 text-variantsA-100 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                            </div>
+                        </div>
+                        <p class="text-2xs"><span class="text-variantsA-100"> {{ $current }} </span>/ 8 </p>
+                    </div>
                         <div class="h-full min-h-svh flex flex-col relative">
                             <img src="{{ asset('img/Q6-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                             <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                                 style="background: url({{ asset('img/frame.png') }}) center top; 
                                 background-size:contain; background-repeat: no-repeat;">
 
-                                <h2 class="text-main text-3xl text-center">สิ่งที่คุณเลือกทำ ประจำก่อนนอนคือ... </h2>
+                                <h2 class="text-main text-3xl text-center">สิ่งที่คุณเลือกทำ <br>ประจำ<br>ก่อนนอน</b>คือ... </h2>
                                 <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                                 <ul class="grid gap-4">
@@ -271,13 +306,20 @@
                     @break
 
                     @case(8)
+                    <div class="pt-4">
+                        <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                            <div class="h-2 text-variantsA-200 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                            </div>
+                        </div>
+                        <p class="text-2xs"><span class="text-variantsA-200"> {{ $current }} </span>/ 8 </p>
+                    </div>
                         <div class="h-full min-h-svh flex flex-col relative">
                             <img src="{{ asset('img/Q7-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                             <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                                 style="background: url({{ asset('img/frame.png') }}) center top; 
                                 background-size:contain; background-repeat: no-repeat;">
 
-                                <h2 class="text-main text-3xl text-center">ให้คุณเลือก 1 ข้อ ที่จะทำให้คุณมั่นใจ</h2>
+                                <h2 class="text-main text-3xl text-center">ให้คุณเลือก 1 ข้อ<br> ที่จะทำให้คุณ<b>มั่นใจ</b></h2>
                                 <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                                 <ul class="grid gap-4">
@@ -305,13 +347,20 @@
                     @break
 
                     @case(9)
+                    <div class="pt-4">
+                        <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                            <div class="h-2 text-variantsA-300 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                            </div>
+                        </div>
+                        <p class="text-2xs"><span class="text-variantsA-300"> {{ $current }} </span>/ 8 </p>
+                    </div>
                         <div class="h-full min-h-svh flex flex-col relative">
                             <img src="{{ asset('img/Q8-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                             <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                                 style="background: url({{ asset('img/frame.png') }}) center top; 
                                 background-size:contain; background-repeat: no-repeat;">
 
-                                <h2 class="text-main text-3xl text-center">ให้คุณเลือก 1 ข้อ ที่ตรงกับตัวคุณมากที่สุด</h2>
+                                <h2 class="text-main text-3xl text-center">ให้คุณเลือก 1 ข้อ <br>ที่<b>ตรงกับตัวคุณ</b>มากที่สุด</h2>
                                 <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                                 <ul class="grid gap-4">
@@ -341,13 +390,20 @@
             @case(2)
                 @switch($page)
                     @case(7)
+                    <div class="pt-4">
+                        <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                            <div class="h-2 text-variantsB-100 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                            </div>
+                        </div>
+                        <p class="text-2xs"><span class="text-variantsB-100"> {{ $current }} </span>/ 8 </p>
+                    </div>
                         <div class="h-full min-h-svh flex flex-col relative">
                             <img src="{{ asset('img/Q6-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                             <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                                 style="background: url({{ asset('img/frame.png') }}) center top; 
                                 background-size:contain; background-repeat: no-repeat;">
 
-                                <h2 class="text-main text-3xl text-center">สิ่งที่คุณเลือกทำ ประจำหลังตื่นนอน...</h2>
+                                <h2 class="text-main text-3xl text-center">สิ่งที่คุณเลือกทำ<br> ประจำ<b>หลังตื่นนอน...</b></h2>
                                 <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                                 <ul class="grid gap-4">
@@ -375,13 +431,20 @@
                     @break
 
                     @case(8)
+                    <div class="pt-4">
+                        <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                            <div class="h-2 text-variantsB-200 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                            </div>
+                        </div>
+                        <p class="text-2xs"><span class="text-variantsB-200"> {{ $current }} </span>/ 8 </p>
+                    </div>
                         <div class="h-full min-h-svh flex flex-col relative">
                             <img src="{{ asset('img/Q7-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                             <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                                 style="background: url({{ asset('img/frame.png') }}) center top; 
                                 background-size:contain; background-repeat: no-repeat;">
 
-                                <h2 class="text-main text-3xl text-center">คุณเลือกที่จะ ออกกำลังกายแบบ...</h2>
+                                <h2 class="text-main text-3xl text-center">คุณเลือกที่จะ <br><b>ออกกำลังกา</b>ยแบบ...</h2>
                                 <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                                 <ul class="grid gap-4">
@@ -409,13 +472,20 @@
                     @break
 
                     @case(9)
+                    <div class="pt-4">
+                        <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
+                            <div class="h-2 text-variantsB-400 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                            </div>
+                        </div>
+                        <p class="text-2xs"><span class="text-variantsB-400"> {{ $current }} </span>/ 8 </p>
+                    </div>
                         <div class="h-full min-h-svh flex flex-col relative">
                             <img src="{{ asset('img/Q8-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
                             <div class="p-6 pt-12 w-11/12 m-auto flex-grow"
                                 style="background: url({{ asset('img/frame.png') }}) center top; 
                                 background-size:contain; background-repeat: no-repeat;">
 
-                                <h2 class="text-main text-3xl text-center">ให้คุณเลือก 1 ข้อ ท่ีตรงกับตัวคุณมากที่สุด</h2>
+                                <h2 class="text-main text-3xl text-center">ให้คุณเลือก 1 ข้อ <br>ท่ี<b>ตรงกับตัวคุณ</b>มากที่สุด</h2>
                                 <span class="block text-center text-sm my-5">ตอบเพียง 1 ข้อเท่านั้น</span>
 
                                 <ul class="grid gap-4">
