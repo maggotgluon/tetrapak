@@ -5,7 +5,7 @@
     <div class="grid gap-2 min-h-svh h-full">
         @switch($page)
             @case(1)
-                <div style="background: url({{ asset('img/Q0-2.jpg') }}) center bottom; background-size:contain; background-repeat: no-repeat;" 
+                <div style="background: url({{ asset('img/Q0-2.jpg') }}) center center; background-size:contain; background-repeat: no-repeat;" 
             class="relative">
                 {{-- <form wire:submit.prevent="goQuiz" class="grid gap-2 min-h-svh h-full"> --}}
                 <div class="absolute top-[50%] w-full px-[16%]">
@@ -39,8 +39,8 @@
                 </div>
                 @break
             @case(2)
-                <div style="background: url({{ asset('img/story1.jpg') }}) center top; background-size:contain; background-repeat: no-repeat;" 
-                    class="relative bg-[#A2FAFF]">
+                <div style="background: url({{ asset('img/story1.jpg') }}) center bottom, #B5F8FF; background-size:contain; background-repeat: no-repeat;" 
+                    class="relative ">
                     <h2 class="text-main text-3xl text-center pt-14">วันพักผ่อนของเรา เริ่มขึ้น...</h2>
                     <div class="absolute top-[73%] w-full px-[5%] text-center">
 
@@ -58,13 +58,13 @@
                 
                 @break
             @case(3)
-                <div style="background: url({{ asset('img/story2.jpg') }}) center top; background-size:contain; background-repeat: no-repeat;" 
-                    class="relative">
+                <div style="background: url({{ asset('img/story2.jpg') }}) center top,#EDCD83; background-size:contain; background-repeat: no-repeat;" 
+                    class="relative ">
                     
                     <h2 class="text-white text-3xl text-center pt-14"><b>เติมพลังสักหน่อย</b><br> ก่อนออกไปรับลม ชมทะเล</h2>
                     <div class="absolute top-[73%] w-full px-[5%] text-center">
 
-                        <x-button flat rounded class="!bg-gradient-to-b from-[#A87C4D] to-[#BF9768] !p-1 
+                        <x-button flat rounded class="!bg-gradient-to-b from-[#A87C4D] to-[#423f3d] !p-1 
                             hover:to-[#A87C4D] hover:from-[#BF9768] transition-all w-full h-16" 
                             wire:click="goQuiz">
                                 <div class="bg-gradient-to-b from-[#C3996B] to-[#AA7E51] 

@@ -1,4 +1,4 @@
-<div class="grid gap-2 min-h-svh overflow-clip h-full bg-[#FFF2DC] px-4 xs:px-1">
+<div class="grid gap-2 min-h-svh overflow-clip h-full bg-[#FFF2DC] px-4 xs:px-1  outline-2 outline-dashed outline-green-500">
 
     @switch($page)
         @case(1)
@@ -25,10 +25,10 @@
             <div class="relative">
                 <h1 class="text-center text-2xl pt-24">หนังสือให้ความยินยอมสำหรับลูกค้า<br>
                     (Customer Consent Form)</h1>
-                <div class="p-6 pt-8 w-11/12 m-auto flex-grow max-h-[65vh]"
+                <div class="p-6 pt-8 aspect-[3/4] w-11/12 m-auto flex-grow max-h-[65vh]"
                     style="background: url({{ asset('img/frame.png') }}) center top; 
                 background-size:contain; background-repeat: no-repeat;">
-                    <div class="p-2 mx-2 overflow-y-scroll h-[55vh] text-xs">
+                    <div class="p-2 mx-2 overflow-y-scroll h-[90%] text-xs ">
                         <p>บริษัท ครีเอเทกซ์ เฮาส์ จำกัด (“ครีเอเทกซ์ เฮาส์ ”) เห็นความสำคัญในการคุ้มครองข้อมูลส่วนบุคคลของท่าน
                             ตามที่กำหนดไว้ใน
                             พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคลพ.ศ. 2562 ครีเอเทกซ์ เฮาส์
@@ -119,7 +119,7 @@
                         ตลาด ข้อมูลข่าวสาร ข้อเสนอพิเศษ และสิทธิ ประโยชน์เกี่ยวกับผลิตภัณฑ์และบริการของบริษัทผู้ว่าจ้าง</p>
                     </div>
                 </div>
-                <div class="absolute bottom-18 w-full text-center grid grid-cols-2 gap-2">
+                <div class="absolute bottom-10 w-full text-center grid grid-cols-2 gap-2">
                     <x-button flat rounded class="!bg-gradient-to-b from-primary-100 to-primary-200 !p-1 
                     hover:from-primary-300 hover:to-primary-400 " 
                     href="{{ route('ClientProfile') }}">

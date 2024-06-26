@@ -53,7 +53,7 @@
                     </ul>
 
                 </div>
-                <img src="{{ asset('img/Q1-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                <img src="{{ asset('img/Q1-bottom.png') }}" class="h-1/4 absolute bottom-0" />
             </div>
         @break
 
@@ -91,7 +91,7 @@
                     </ul>
 
                 </div>
-                <img src="{{ asset('img/Q2-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                <img src="{{ asset('img/Q2-bottom.png') }}" class="h-1/4 absolute bottom-0" />
             </div>
         @break
 
@@ -128,7 +128,7 @@
                     </ul>
 
                 </div>
-                <img src="{{ asset('img/Q3-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                <img src="{{ asset('img/Q3-bottom.png') }}" class="h-1/4 absolute bottom-0" />
             </div>
         @break
 
@@ -165,19 +165,19 @@
                     </ul>
 
                 </div>
-                <img src="{{ asset('img/Q4-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                <img src="{{ asset('img/Q4-bottom.png') }}" class="h-1/4 absolute bottom-0" />
             </div>
         @break
 
         @case(5)
             <div class="h-full min-h-svh flex flex-col relative"
-                style="background: url({{ asset('img/story3.jpg') }}) center top; 
+                style="background: url({{ asset('img/story3.jpg') }}) center bottom; 
                     background-size:contain; background-repeat: no-repeat;">
                 <div class="p-6 pt-12 w-11/12 m-auto flex-grow">
 
                     <h2 class="text-main text-3xl text-center">เจอเพื่อนๆ ทั้งที แชร์เรื่องราวดีๆ ให้เพื่อนๆ ฟัง</h2>
                     
-                    <div class="absolute top-[68%] left-0 px-[5%] w-full text-center">
+                    <div class="absolute bottom-[25%] left-0 px-[5%] w-full text-center">
 
                         <x-button flat rounded class="!bg-gradient-to-b from-[#A87C4D] to-[#BF9768] !p-1 
                             hover:to-[#A87C4D] hover:from-[#BF9768] transition-all w-full h-16" 
@@ -224,7 +224,7 @@
                     </ul>
 
                 </div>
-                <img src="{{ asset('img/Q5-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                <img src="{{ asset('img/Q5-bottom.png') }}" class="h-1/4 absolute bottom-0" />
             </div>
         @break
 
@@ -266,7 +266,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q6-1-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                            <img src="{{ asset('img/Q6-1-bottom.png') }}" class="h-1/4 absolute bottom-0" />
                         </div>
                     @break
 
@@ -300,7 +300,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q7-1-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                            <img src="{{ asset('img/Q7-1-bottom.png') }}" class="h-1/4 absolute bottom-0" />
                         </div>
                     @break
 
@@ -330,7 +330,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q8-1-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                            <img src="{{ asset('img/Q8-1-bottom.png') }}" class="h-1/4 absolute bottom-0" />
                         </div>
                     @break
 
@@ -370,7 +370,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q6-2-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                            <img src="{{ asset('img/Q6-2-bottom.png') }}" class="h-1/4 absolute bottom-0" />
                         </div>
                     @break
 
@@ -404,7 +404,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q7-2-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                            <img src="{{ asset('img/Q7-2-bottom.png') }}" class="h-1/4 absolute bottom-0" />
                         </div>
                     @break
 
@@ -435,7 +435,7 @@
                                 </ul>
 
                             </div>
-                            <img src="{{ asset('img/Q8-2-bottom.png') }}" class="w-2/3 absolute bottom-10" />
+                            <img src="{{ asset('img/Q8-2-bottom.png') }}" class="h-1/4 absolute bottom-0" />
                         </div>
                     @break
 
