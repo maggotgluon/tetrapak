@@ -25,7 +25,7 @@ class Profile extends Component
     public function nextPage($p=null){
         $validated = $this->validate([
             "name"=>"required|string|max:20",
-            "age"=>"required|max:99|numeric"
+            "age"=>"required|min:10|max:99|numeric"
         ]);
         $this->answer->name = $this->name;
         $this->answer->age = $this->age;

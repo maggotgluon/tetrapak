@@ -7,14 +7,19 @@
             @case(1)
                 <div style="background: url({{ asset('img/Q0-2.jpg') }}) center center; background-size:contain; background-repeat: no-repeat;" 
             class="relative">
+                <div class="py-4 w-full absolute top-[32%] opacity-85">
+                    <x-errors />
+                </div>
                 {{-- <form wire:submit.prevent="goQuiz" class="grid gap-2 min-h-svh h-full"> --}}
                 <div class="absolute top-[50%] w-full px-[16%]">
+                    
                     <input class="bg-gradient-to-br from-slate-300 to-slate-50 rounded-full w-full text-3xl border-0 text-center"
-                        wire:model.live="name" type="text" min="1" max="20" placeholder="ชื่อ"/>
+                        wire:model.live="name" type="text" size="20" placeholder="ชื่อ"/>
                 </div>
                 <div class="absolute top-[62%] w-full px-[16%]">
+                    
                     <input class="bg-gradient-to-br from-slate-300 to-slate-50 rounded-full w-full text-3xl border-0 text-center"
-                        wire:model.live="age" type="number" min="1" max="99" placeholder="อายุ"/>
+                        wire:model.live="age" type="number" min="10" max="99" placeholder="อายุ"/>
                 </div>
                 
                 <div class="absolute top-[75%] w-full px-[5%] text-center">
@@ -58,7 +63,7 @@
                 
                 @break
             @case(3)
-                <div style="background: url({{ asset('img/story2.jpg') }}) center top,#EDCD83; background-size:contain; background-repeat: no-repeat;" 
+                <div style="background: url({{ asset('img/story2.jpg') }}) center bottom,#3D94D0; background-size:contain; background-repeat: no-repeat;" 
                     class="relative ">
                     
                     <h2 class="text-white text-3xl text-center pt-14"><b>เติมพลังสักหน่อย</b><br> ก่อนออกไปรับลม ชมทะเล</h2>
