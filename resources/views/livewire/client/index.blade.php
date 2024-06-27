@@ -1,16 +1,16 @@
-<div class="absolute w-full min-h-svh" style="background: url({{asset('image/center-bg.jpg')}}) center;
+<div class="absolute w-full min-h-screen" style="background: url({{asset('image/center-bg.jpg')}}) center;
             background-repeat: no-repeat; 
             background-attachment: fixed; 
             background-size: cover; ">
     
     <img class="tetrapak_logo" src="{{asset('image/tetrapak_logo.png')}}" alt="">
-    <div class="center-div text-3xl p-4 text-[#8B4D36]"> 
-        <h1>คุณเป็น ‘คนช่างเลือก’ <br> แบบไหน ?</h1>
+    <div class="absolute w-full h-auto z-50">
+        <h1 class=" text-center text-3xl pt-24 text-[#8B4D36] ">คุณเป็น <b>‘คนช่างเลือก’</b> <br>แบบไหน ?</h1>
     </div>
     <div class="absolute bottom-[12%] w-full h-auto ">
         <img class="object-contain  w-auto m-auto height-800" src="{{asset('image/main.png')}}" alt="">
     </div>
-    <div class="absolute bottom-[12%] w-full text-center z-50">
+    <div class="absolute bottom-[25%] w-full text-center z-50">
         <x-button flat rounded class="!bg-gradient-to-b from-primary-100 to-primary-200 !p-1 
         hover:from-primary-300 hover:to-primary-400 w-60" 
             :href="route('pdpa')">
@@ -58,7 +58,7 @@
             object-fit: contain;
         }
         .footbg{
-            background-image: url(image/foot-bg.png);
+            /* background-image: url(image/foot-bg.png); */
             background-repeat: repeat-x;
         }
         .bottom-0 {
