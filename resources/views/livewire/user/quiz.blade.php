@@ -366,7 +366,7 @@
                                 <ul class="grid gap-4">
                                     <li>
                                         <x-button rounded class="bg-variantsA-300 text-white hover:!bg-variantsA-300/90 w-full"
-                                            label="สายนับแคล แคลยิ่งต่ำเรายิ่งแฮปปี่" wire:click="ansScore('8','a',1)" />
+                                            label="สายนับแคล แคลยิ่งต่ำเรายิ่งแฮปปี้" wire:click="ansScore('8','a',1)" />
                                     </li>
                                     <li>
                                         <x-button rounded class="bg-variantsA-300 text-white hover:!bg-variantsA-300/90 w-full"

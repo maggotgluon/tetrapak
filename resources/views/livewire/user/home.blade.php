@@ -1,9 +1,10 @@
 <div class="grid gap-2 min-h-svh overflow-clip h-full bg-[#FFF2DC] px-4 xs:px-1 ">
 
     @switch($page)
-        @case(1)
+        @case(0)
+
             <div style="background: url({{ asset('img/Q0-1.jpg') }}) center bottom; background-size:contain; background-repeat: no-repeat;"
-                class="relative">
+                class="relative hidden">
                 <img src="{{asset('img/logo.png')}}" class="absolute top-2 right-2 w-10"/>
                 <h1 class="text-center text-3xl pt-24">คุณเป็น <b>‘คนช่างเลือก’</b> <br>แบบไหน ?</h1>
                 {{-- <x-button label="next" :href="route('ClientProfile')"/> --}}
@@ -21,7 +22,7 @@
             </div>
         @break
 
-        @case(2)
+        @case(1)
             <div class="relative">
                 <h1 class="text-center text-2xl pt-24">หนังสือให้ความยินยอมสำหรับลูกค้า<br>
                     (Customer Consent Form)</h1>

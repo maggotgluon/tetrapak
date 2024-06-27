@@ -11,6 +11,7 @@ use App\Livewire\Auth\Verify;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+use App\Livewire\Client\Index as ClientIndex;
 use App\Livewire\User\Home as ClientHome;
 use App\Livewire\User\Profile as ClientProfile;
 use App\Livewire\User\Quiz as ClientQuiz;
@@ -30,7 +31,10 @@ use App\Livewire\Admin\Index as AdminIndex;
 */
 
 // Route::view('/', 'welcome')->name('home');
-Route::get('/', ClientHome::class)->name('home');
+Route::get('/', ClientIndex::class)->name('home');
+
+
+Route::get('/pdpa', ClientHome::class)->name('pdpa');
 
 Route::get('/profile', ClientProfile::class)->name('ClientProfile');
 Route::get('/quiz/{client_answer?}', ClientQuiz::class)->name('ClientQuiz');
