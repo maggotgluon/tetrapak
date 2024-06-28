@@ -1,4 +1,4 @@
-<div class="absolute w-full min-h-screen" style="background: url({{asset('image/center-bg.jpg')}}) center;
+<div class="absolute w-full min-h-[100svh] max-h-[100svh]" style="background: url({{asset('image/center-bg.jpg')}}) center;
             background-repeat: no-repeat; 
             background-attachment: fixed; 
             background-size: cover; ">
