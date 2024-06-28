@@ -21,8 +21,8 @@
             </div>
         </x-button>
     </div>
-    <div class="absolute bottom-0 w-full max-h-48" style="background: url({{asset('image/foot-bg.png')}})">
-        <img class="object-contain h-52 m-auto pt-12" src="{{asset('image/foot-logo.png')}}" alt="">
+    <div class="absolute bottom-0 w-full max-h-36 py-2" style="background: url({{asset('image/foot-bg.png')}})">
+        <img class="object-contain m-auto pt-16 pb-2" src="{{asset('image/foot-logo.png')}}" alt="">
     </div>
 
 
