@@ -27,7 +27,7 @@
             let img = new Image();
 
             // Setting up a function with the code to run after the image is loaded
-            img.onload = () => {
+            img.onload = async() => {
                 // Once the image is loaded, we will get the width & height of the image
                 let loadedImageWidth = img.width;
                 let loadedImageHeight = img.height;
@@ -35,8 +35,11 @@
                 // Set the canvas to the same size as the image.
                 canvas.width = loadedImageWidth;
                 canvas.height = loadedImageHeight;
-                
-                ctx.font = "220px db_heaventrounded"
+                let font = FontFace('myFont',"url('/resources/fonts/DB\ HeaventRounded\ Bd\ v3.2.1.ttf')")
+                await font.load()
+                document.fonts.add(font)
+
+                ctx.font = "220px myFont"
                 ctx.fillStyle = "#8b4d36";
                 ctx.textAlign = "center";
                 ctx.textBaseline = "top";
@@ -48,23 +51,23 @@
             // Now that we have set up the image "onload" handeler, we can assign
             // an image URL to the image.
             img.src = imageUrl;
-            var a = document.createElement('a');
-            a.href = imageUrl;
-            a.download = 'result.jpg';
-            // console.log('create element'+'a')
-            a.click(); 
+            // var a = document.createElement('a');
+            // a.href = imageUrl;
+            // a.download = 'result.jpg';
+            // // console.log('create element'+'a')
+            // a.click(); 
         };
 
         // Run code after the page is loaded
         document.addEventListener("DOMContentLoaded", () => {
         // Setting up the canvas
-            let theCanvas = document.getElementById("myCanvas");
+            // let theCanvas = document.getElementById("myCanvas");
 
             // Some image URL..
-            let imageUrl ="{{asset('img/result/'.$result.'.jpg')}}";
+            // let imageUrl ="{{asset('img/result/'.$result.'.jpg')}}";
 
             // Load image on the canvas & re-size the canvas based on the image size
-            loadImageOnCanvasAndResizeCanvasToFitImage(theCanvas, imageUrl,"{{$name??"-"}}");
+            // loadImageOnCanvasAndResizeCanvasToFitImage(theCanvas, imageUrl,"{{$name??"-"}}");
         
         });
 
