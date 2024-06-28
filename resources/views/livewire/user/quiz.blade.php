@@ -268,7 +268,7 @@
                     @case(7)
                         <div class="pt-4">
                             <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
-                                <div class="h-2 text-variantsA-100 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                                <div class="h-2 bg-variantsA-100 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
                                 </div>
                             </div>
                             <p class="text-2xs"><span class="text-variantsA-100"> {{ $current }} </span>/ 8 </p>
@@ -309,7 +309,7 @@
                     @case(8)
                         <div class="pt-4">
                             <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
-                                <div class="h-2 text-variantsA-200 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                                <div class="h-2 bg-variantsA-200 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
                                 </div>
                             </div>
                             <p class="text-2xs"><span class="text-variantsA-200"> {{ $current }} </span>/ 8 </p>
@@ -350,7 +350,7 @@
                     @case(9)
                         <div class="pt-4">
                             <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
-                                <div class="h-2 text-variantsA-300 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                                <div class="h-2 bg-variantsA-300 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
                                 </div>
                             </div>
                             <p class="text-2xs"><span class="text-variantsA-300"> {{ $current }} </span>/ 8 </p>
@@ -393,7 +393,7 @@
                     @case(7)
                         <div class="pt-4">
                             <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
-                                <div class="h-2 text-variantsB-100 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                                <div class="h-2 bg-variantsB-100 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
                                 </div>
                             </div>
                             <p class="text-2xs"><span class="text-variantsB-100"> {{ $current }} </span>/ 8 </p>
@@ -434,7 +434,7 @@
                     @case(8)
                         <div class="pt-4">
                             <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
-                                <div class="h-2 text-variantsB-200 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                                <div class="h-2 bg-variantsB-200 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
                                 </div>
                             </div>
                             <p class="text-2xs"><span class="text-variantsB-200"> {{ $current }} </span>/ 8 </p>
@@ -478,10 +478,10 @@
                                 @case('oat')
                                     <div class="pt-4">
                                         <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
-                                            <div class="h-2 text-variantsB-400 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                                            <div class="h-2 bg-variantsB-400 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
                                             </div>
                                         </div>
-                                        <p class="text-2xs"><span class="text-variantsB-400"> oat {{ $current }} </span>/ 8 </p>
+                                        <p class="text-2xs"><span class="text-variantsB-400"> {{ $current }} </span>/ 8 </p>
                                     </div>
                                     <div class="h-full min-h-svh flex flex-col relative">
                                         <img src="{{ asset('img/Q8-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -515,11 +515,11 @@
                                 @case('pistachio')
                                     <div class="pt-4">
                                         <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
-                                            <div class="h-2 text-variantsB-400 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                                            <div class="h-2 bg-variantsB-400 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
                                             </div>
                                         </div>
 
-                                        <p class="text-2xs"><span class="text-variantsB-400"> pistachio {{ $current }} </span>/ 8 </p>
+                                        <p class="text-2xs"><span class="text-variantsB-400"> {{ $current }} </span>/ 8 </p>
                                     </div>
                                     <div class="h-full min-h-svh flex flex-col relative">
                                         <img src="{{ asset('img/Q8-2-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />

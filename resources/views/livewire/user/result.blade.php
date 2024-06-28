@@ -81,10 +81,12 @@
         function saveImg(){
             let theCanvas = document.getElementById("myCanvas");
             // Some image URL..
-			theCanvas.classList.remove("hidden")
-			let myWindows = window.open('',"_blank")
-			myWindows.document.body.appendChild(theCanvas)
-			theCanvas.classList.add("hidden")
+			const a = document.createElement("a")
+			document.body.appendChild(a)
+			a.href = theCanvas.toDataURL()
+			a.download = "result.png"
+			a.click()
+			document.body.removeChild(a)
         }
 
     </script>
