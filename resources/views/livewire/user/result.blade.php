@@ -51,12 +51,13 @@
                 ctx.drawImage(img, 0, 0);
                 ctx.fillText('{{$name??"-"}}', 1450, 500);
 
-                // console.log(canvas.toDataURL())
                 // let i = document.getElementById('resultImg');
                 let i = document.getElementById('resultImg');
                 let t = document.getElementById('resultTex');
                 t.classList.add('hidden')
-                i.src=canvas.toDataURL();
+                i.src=canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+                data = canvas.toDataURL("image/png").replace(/^data:image\/(png|jpg);base64,/, "");
+                console.log(data)
                 // document.body.appendChild(i)
 				return ctx
             };
