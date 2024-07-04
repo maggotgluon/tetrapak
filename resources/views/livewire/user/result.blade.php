@@ -52,8 +52,9 @@
                 ctx.fillText('{{$name??"-"}}', 1450, 500);
 
                 // console.log(canvas.toDataURL())
-                let i = document.getElementById('#resultImg');
-                let t = document.getElementById('#resultTex');
+                // let i = document.getElementById('resultImg');
+                let i = document.getElementById('resultImg');
+                let t = document.getElementById('resultTex');
                 t.classList.add('hidden')
                 i.src=canvas.toDataURL();
                 // document.body.appendChild(i)
