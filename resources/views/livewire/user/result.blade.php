@@ -1,4 +1,6 @@
 <div class="relative font-db_heaventrounded">
+    
+    {{-- <img src="data:image/png;base64,{{ $data }}"/> --}}
     <div id="result" >
         <img src="{{asset('img/result/'.$result.'.jpg')}}">
         <h2 class="absolute top-[13%] left-[45%] w-1/2 text-center text-3xl text-primary-100">{{$name??""}}</h2>
@@ -74,6 +76,16 @@
 
             // Load image on the canvas & re-size the canvas based on the image size
             loadImageOnCanvasAndResizeCanvasToFitImage(theCanvas, imageUrl,"{{$name??"-"}}");
+
+            let theResult = document.getElementById("result");
+
+            theCanvas.classList.remove('hidden')
+            theResult.classList.add('hidden')
+
+            // let i = document.createElement('img')
+            // i.src = theCanvas.toDataURL();
+            // console.log(i)
+            // document.body.appendChild(i)
         
         });
 
