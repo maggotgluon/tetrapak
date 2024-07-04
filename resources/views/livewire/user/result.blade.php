@@ -16,6 +16,7 @@
         </a>
 
         {{-- <x-button label="restart" href="{{route('ClientProfile')}}" /> --}}
+        <x-button label="share img" onclick="shareImg()" />
         
     </div>
     
@@ -61,12 +62,12 @@
                 // document.body.appendChild(i)
 				return ctx
             };
-			
+			//open images on new windows
   			//const win = window.open(dataUrl, '_blank');
             
 			// Now that we have set up the image "onload" handeler, we can assign
             // an image URL to the image.
-            img.src = imageUrl;
+            // img.src = imageUrl;
             // console.log(img)
             // var a = document.createElement('a');
             // a.href = imageUrl;
@@ -86,17 +87,6 @@
 
             // Load image on the canvas & re-size the canvas based on the image size
             loadImageOnCanvasAndResizeCanvasToFitImage(theCanvas, imageUrl,"{{$name??"-"}}");
-
-            let theResult = document.getElementById("result");
-
-            // theCanvas.classList.remove('hidden')
-            // theResult.classList.add('hidden')
-
-            // let i = document.createElement('img')
-            // i.src = theCanvas.toDataURL();
-            // console.log(i)
-            // document.body.appendChild(i)
-        
         });
 
         
@@ -109,6 +99,27 @@
 			a.download = "result.png"
 			a.click()
 			// document.body.removeChild(a)
+        }
+        function shareImg(){
+            let files = document.getElementById('resultImg');
+            if(!navigator.canShare){
+                alert("Your browser doesn't support the Web Share API.")
+                return
+            }
+            if (navigator.canShare({ files })) {
+                try {
+                await navigator.share({
+                    files,
+                    title: "Images",
+                    text: "Beautiful images",
+                });
+                alert( "Shared!");
+                } catch (error) {
+                alert( `Error: ${error.message}`);
+                }
+            } else {
+                alert( `Your system doesn't support sharing these files.`);
+            }
         }
 
     </script>
