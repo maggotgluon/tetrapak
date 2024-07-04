@@ -2,8 +2,8 @@
     
     {{-- <img src="data:image/png;base64,{{ $data }}"/> --}}
     <div id="result" >
-        <img src="{{asset('img/result/'.$result.'.jpg')}}">
-        <h2 class="absolute top-[13%] left-[45%] w-1/2 text-center text-3xl text-primary-100">{{$name??""}}</h2>
+        <img id="resultImg" src="{{asset('img/result/'.$result.'.jpg')}}">
+        <h2 id="resultTex" class="absolute top-[13%] left-[45%] w-1/2 text-center text-3xl text-primary-100">{{$name??""}}</h2>
     </div>
 
     <div id="btn" class="absolute bottom-[6%] left-[60%] w-[30%] h-[12%] grid gap-6">
@@ -50,6 +50,13 @@
                 // Draw the image on to the canvas.
                 ctx.drawImage(img, 0, 0);
                 ctx.fillText('{{$name??"-"}}', 1450, 500);
+
+                // console.log(canvas.toDataURL())
+                let i = document.getElementById('#resultImg');
+                let t = document.getElementById('#resultTex');
+                t.classList.add('hidden')
+                i.src=canvas.toDataURL();
+                // document.body.appendChild(i)
 				return ctx
             };
 			
@@ -58,10 +65,11 @@
 			// Now that we have set up the image "onload" handeler, we can assign
             // an image URL to the image.
             img.src = imageUrl;
+            // console.log(img)
             // var a = document.createElement('a');
             // a.href = imageUrl;
             // a.download = 'result.jpg';
-             // console.log('create element'+'a')
+            // console.log('create element'+'a')
             // a.click(); 
 			
         };
@@ -79,8 +87,8 @@
 
             let theResult = document.getElementById("result");
 
-            theCanvas.classList.remove('hidden')
-            theResult.classList.add('hidden')
+            // theCanvas.classList.remove('hidden')
+            // theResult.classList.add('hidden')
 
             // let i = document.createElement('img')
             // i.src = theCanvas.toDataURL();
@@ -98,7 +106,7 @@
 			a.href = theCanvas.toDataURL()
 			a.download = "result.png"
 			a.click()
-			document.body.removeChild(a)
+			// document.body.removeChild(a)
         }
 
     </script>
