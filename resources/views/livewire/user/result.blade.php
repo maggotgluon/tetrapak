@@ -100,7 +100,7 @@
 			a.click()
 			// document.body.removeChild(a)
         }
-        function shareImg(){
+        const shareImg = async() => {
             let files = document.getElementById('resultImg');
             if(!navigator.canShare){
                 alert("Your browser doesn't support the Web Share API.")
