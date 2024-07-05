@@ -23,4 +23,8 @@ class answers extends Model
         'status',
     ];
 
+    protected $casts = [
+        'created_at'=>'date'
+    ];
+
 }

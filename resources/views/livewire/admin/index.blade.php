@@ -3,17 +3,25 @@
         <div class="grid grid-cols-2 gap-2">
             <x-input
                 label="Report From"
-                placeholder="date from"
-                min="" type="date"/>
+                wire:model.live="dateFrom"
+                placeholder="{{now()->toDateString()}}"
+                min="{{$filter['dateMin']->toDateString()}}" 
+                max="{{$filter['dateMax']->toDateString()}}" 
+                type="date"/>
             <x-input
                 label="Report To"
-                placeholder="Select one status"
-                min="" type="date"/>
+                wire:model.live="dateTo"
+                placeholder="{{now()->toDateString()}}"
+                min="{{$filter['dateMin']->toDateString()}}" 
+                max="{{$filter['dateMax']->toDateString()}}" 
+                type="date"/>
             <x-button class="col-span-2" label="Download"/>
         </div>
     </x-card>
     <hr class="my-4"/>
         <div class="grid gap-2 grid-cols-2">
+            <span>{{$dateFrom}}</span>
+            <span>{{$dateTo}}</span>
         <x-card title="เข้าร่วมทั้งหมด">
             <h3 class="text-3xl"> {{$data->where('status',true)->count()}}/{{$data->count()}} </h3>
         </x-card>
@@ -36,11 +44,11 @@
         </x-card>
 
         <x-card title="ยอดรายวัน">
-            <div class="h-52 bg-pink-300 overflow-y-auto overflow-x-clip p-2">
+            <div class="h-52 overflow-y-auto overflow-x-clip p-2">
                 <ul class="pl-4">
-                    @foreach ($data->unique(date('created_at')) as $cc_date)
+                    @foreach ($data->unique('created_at') as $cc_date)
                     <li>
-                        {{$cc_date->created_at->toDateString() }} : 
+                        {{$cc_date->created_at->toDateString() }} > 
                         Total : {{$data->whereBetween('created_at',[$cc_date->created_at->toDateString(),$cc_date->created_at->addDay(1)->toDateString()])->count()}}
                         | Finished : {{$data->whereBetween('created_at',[$cc_date->created_at->toDateString(),$cc_date->created_at->addDay(1)->toDateString()])->where('status',true)->count()}}
                         | Dropoff : {{$data->whereBetween('created_at',[$cc_date->created_at->toDateString(),$cc_date->created_at->addDay(1)->toDateString()])->where('status',false)->count()}}

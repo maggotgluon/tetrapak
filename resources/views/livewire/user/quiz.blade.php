@@ -268,10 +268,10 @@
                     @case(7)
                         <div class="pt-4">
                             <div class="w-full bg-gradient-to-b from-slate-200 to-white rounded-full overflow-clip p-1">
-                                <div class="h-2 bg-variantsA-100 rounded-full" style="width: {{ ($current / 8) * 100 }}%">
+                                <div class="h-2 bg-variantsA-100 rounded-full" style="width: {{ (1 / 8) * 100 }}%">
                                 </div>
                             </div>
-                            <p class="text-2xs"><span class="text-variantsA-100"> {{ $current }} </span>/ 8 </p>
+                            <p class="text-2xs"><span class="text-variantsA-100"> 1 </span>/ 8 </p>
                         </div>
                         <div class="h-full min-h-svh flex flex-col relative">
                             <img src="{{ asset('img/Q6-1-top.png') }}" class="w-11/12 -mb-12 -mt-8 z-10" />
@@ -533,7 +533,7 @@
                                             <ul class="grid gap-4">
                                                 <li>
                                                     <x-button rounded class="bg-variantsB-300 text-white hover:!bg-variantsB-300/90 w-full"
-                                                        label="มีความสุขกับการอกกกำลังกายทุกวัน" wire:click="ansScore('8','a',1)" />
+                                                        label="มีความสุขกับการออกกำลังกายทุกวัน" wire:click="ansScore('8','a',1)" />
                                                 </li>
                                                 <li>
                                                     <x-button rounded class="bg-variantsB-300 text-white hover:!bg-variantsB-300/90 w-full"

@@ -1,22 +1,22 @@
 <div class="relative font-db_heaventrounded">
     
-    {{-- <img src="data:image/png;base64,{{ $data }}"/> --}}
     <div id="result" >
         <img id="resultImg" src="{{asset('img/result/'.$result.'.jpg')}}">
         <h2 id="resultTex" class="absolute top-[13%] left-[45%] w-1/2 text-center text-3xl text-primary-100">{{$name??""}}</h2>
     </div>
 
-    <div id="btn" class="absolute bottom-[6%] left-[60%] w-[30%] h-[12%] grid gap-6">
-        <img class="cursor-pointer" src="{{asset('img/result_btn/button_Ans-A_Save-01.png')}}" onclick="saveImg()">
-        <a rel="nofollow noopener noreferrer"
+    <div id="btn" class="absolute bottom-[5%] left-[60%] w-[30%] grid gap-6 hidden">
+        {{-- <img class="cursor-pointer" src="{{asset('img/result_btn/button_Ans-A_Save-01.png')}}" onclick="saveImg()"> --}}
+        {{-- <a rel="nofollow noopener noreferrer"
             target="_blank" 
             href="{!!Share::page(route('home'), 
                 'มาเล่น Quiz ที่จะบอกว่าคุณเป็นคนช่างเลือกแบบไหนกัน')->facebook()->getRawLinks()!!}">
             <img src="{{asset('img/result_btn/button_Ans-A_Share-01.png')}}">
-        </a>
+        </a> --}}
 
-        {{-- <x-button label="restart" href="{{route('ClientProfile')}}" /> --}}
-        <x-button label="share img" onclick="shareImg()" />
+        <x-button.circle flat class="!p-0 !w-auto !h-auto" onclick="share()" >
+            <img src="{{asset('img/result_btn/tetrapka-save-btn.png')}}">
+        </x-button>
         
     </div>
     
@@ -59,6 +59,8 @@
                 i.src=canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
                 data = canvas.toDataURL("image/png").replace(/^data:image\/(png|jpg);base64,/, "");
                 console.log(data)
+				
+				document.getElementById('btn').classList.remove('hidden')
                 // document.body.appendChild(i)
 				return ctx
             };
@@ -67,7 +69,7 @@
             
 			// Now that we have set up the image "onload" handeler, we can assign
             // an image URL to the image.
-            // img.src = imageUrl;
+            img.src = imageUrl;
             // console.log(img)
             // var a = document.createElement('a');
             // a.href = imageUrl;
@@ -80,6 +82,7 @@
         // Run code after the page is loaded
         document.addEventListener("DOMContentLoaded", () => {
         // Setting up the canvas
+			
             let theCanvas = document.getElementById("myCanvas");
 
             // Some image URL..
@@ -95,32 +98,47 @@
             // Some image URL..
 			const a = document.createElement("a")
 			document.body.appendChild(a)
-			a.href = theCanvas.toDataURL()
-			a.download = "result.png"
+			a.href = theCanvas.toDataURL('images/jpeg')
+			a.download = "result.jpg"
 			a.click()
 			// document.body.removeChild(a)
         }
-        const shareImg = async() => {
-            let files = document.getElementById('resultImg');
-            if(!navigator.canShare){
-                alert("Your browser doesn't support the Web Share API.")
-                return
-            }
-            if (navigator.canShare({ files })) {
-                try {
-                await navigator.share({
-                    files,
-                    title: "Images",
-                    text: "Beautiful images",
-                });
-                alert( "Shared!");
-                } catch (error) {
-                alert( `Error: ${error.message}`);
-                }
-            } else {
-                alert( `Your system doesn't support sharing these files.`);
-            }
-        }
 
+        const share = async()=>  {
+            if (!('share' in navigator)) {
+                alert("Your browser doesn't support the Web Share API.")
+            return
+            }
+            // `element` is the HTML element you want to share.
+            // `backgroundColor` is the desired background color.
+            const canvas = document.getElementById('myCanvas')
+            canvas.toBlob(async (blob) => {
+                // Even if you want to share just one file you need to
+                // send them as an array of files.
+                const files = [new File([blob], 'result.png', { type: blob.type })]
+                const shareData = {
+                    text: 'AlternativeMilk4U',
+                    title: 'มาเล่น Quiz ที่จะบอกว่าคุณเป็นคนช่างเลือกแบบไหนกัน',
+                    files,
+                }
+                if (navigator.canShare(shareData)) {
+                    try {
+                        await navigator.share(shareData)
+                    } catch (err) {
+                        if (err.name !== 'AbortError') {
+                            console.error(err.name, err.message)
+                        }
+                    }
+                } else {
+                    const shareData = {
+                        text: 'AlternativeMilk4U',
+                        title: 'มาเล่น Quiz ที่จะบอกว่าคุณเป็นคนช่างเลือกแบบไหนกัน',
+                        url: '{{route('home')}}',
+                    }
+                    console.warn('Sharing not supported', shareData)
+                }
+            })
+        }
+        
     </script>
 </div>
