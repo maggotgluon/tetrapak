@@ -24,7 +24,8 @@ class answers extends Model
     ];
 
     protected $casts = [
-        'created_at'=>'date'
+        'created_at'=>'date',
+        'answer'=>'array'
     ];
 
 }

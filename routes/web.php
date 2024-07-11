@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\downloads;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Passwords\Confirm;
 use App\Livewire\Auth\Passwords\Email;
@@ -59,6 +60,9 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin', AdminIndex::class)->name('AdminIndex');
+
+
+    Route::get('/download/{dateFrom}/{dateTo}', [downloads::class,'result'])->name('download');
     // Route::get('email/verify', Verify::class)
     //     ->middleware('throttle:6,1')
     //     ->name('verification.notice');

@@ -24,6 +24,6 @@ class Index extends Component
     public function render()
     {
         $this->data = answers::whereBetween('created_at',[$this->dateFrom,(new Carbon($this->dateTo))->addDay(1)])->orderBy('created_at','desc')->get();
-        return view('livewire.admin.index');
+        return view('livewire.admin.index')->extends('layouts/app');
     }
 }
